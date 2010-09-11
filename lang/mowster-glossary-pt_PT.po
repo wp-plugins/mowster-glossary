@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: mowsterGlossary 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-06 11:52-0000\n"
+"POT-Creation-Date: 2010-09-11 19:02-0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: mowsterJobs | http://jobs.mowster.net <mail@jobs.mowster.net>\n"
@@ -21,146 +21,152 @@ msgstr ""
 "X-Poedit-Basepath: .\n"
 "X-Poedit-SearchPath-0: ..\n"
 
-#: ../mowsterGlossay.php:53
-#: ../mowsterGlossay.php:151
-#: ../mowsterGlossay.php:189
-#: ../mowsterGlossay.php:339
-#: ../mowsterGlossay.php:818
+#: ../mowsterGlossay.php:35
+#: ../mowsterGlossay.php:63
+#: ../mowsterGlossay.php:830
+#: ../mowsterGlossay.php:1164
+#, fuzzy
 msgid "Glossary"
-msgstr "Glossário"
+msgstr "glossario"
 
-#: ../mowsterGlossay.php:59
+#: ../mowsterGlossay.php:69
 msgid "glossary"
 msgstr "glossario"
 
-#: ../mowsterGlossay.php:192
+#: ../mowsterGlossay.php:159
+#: ../mowsterGlossay.php:197
+#: ../mowsterGlossay.php:349
+msgid "mowsterGlossary"
+msgstr "Glossário"
+
+#: ../mowsterGlossay.php:200
 msgid "Settings"
 msgstr "Definições"
 
-#: ../mowsterGlossay.php:195
+#: ../mowsterGlossay.php:203
 msgid "Number of Terms per Page:"
 msgstr "Número de Termos por Página:"
 
-#: ../mowsterGlossay.php:223
-#: ../mowsterGlossay.php:728
+#: ../mowsterGlossay.php:231
+#: ../mowsterGlossay.php:740
 msgid "Update &raquo;"
 msgstr "Editar &raquo;"
 
-#: ../mowsterGlossay.php:243
+#: ../mowsterGlossay.php:251
 msgid "The Options were saved successfully!"
 msgstr "Opções guardadas com sucesso!"
 
-#: ../mowsterGlossay.php:323
-#: ../mowsterGlossay.php:324
-#: ../mowsterGlossay.php:474
-#: ../mowsterGlossay.php:475
+#: ../mowsterGlossay.php:331
+#: ../mowsterGlossay.php:332
+#: ../mowsterGlossay.php:486
+#: ../mowsterGlossay.php:487
 msgid "Previous"
 msgstr "Anterior"
 
-#: ../mowsterGlossay.php:327
-#: ../mowsterGlossay.php:328
-#: ../mowsterGlossay.php:483
-#: ../mowsterGlossay.php:484
+#: ../mowsterGlossay.php:335
+#: ../mowsterGlossay.php:336
+#: ../mowsterGlossay.php:495
+#: ../mowsterGlossay.php:496
 msgid "Next"
 msgstr "Seguinte"
 
-#: ../mowsterGlossay.php:339
+#: ../mowsterGlossay.php:349
 msgid "terms"
 msgstr "definições"
 
-#: ../mowsterGlossay.php:372
+#: ../mowsterGlossay.php:384
 msgid "Term"
 msgstr "Termo"
 
-#: ../mowsterGlossay.php:373
+#: ../mowsterGlossay.php:385
 msgid "Definition"
 msgstr "Definição"
 
-#: ../mowsterGlossay.php:381
+#: ../mowsterGlossay.php:393
 msgid "Erease the term"
 msgstr "Apagar o Termo"
 
-#: ../mowsterGlossay.php:398
+#: ../mowsterGlossay.php:410
 msgid "Edit"
 msgstr "Editar"
 
-#: ../mowsterGlossay.php:399
+#: ../mowsterGlossay.php:411
 msgid "Delete"
 msgstr "Apagar"
 
-#: ../mowsterGlossay.php:436
-#: ../mowsterGlossay.php:524
+#: ../mowsterGlossay.php:448
+#: ../mowsterGlossay.php:536
 msgid "There are no Terms in the database."
 msgstr "Não existem termos na base de dados."
 
-#: ../mowsterGlossay.php:475
-#: ../mowsterGlossay.php:484
-#: ../mowsterGlossay.php:515
-#: ../mowsterGlossay.php:884
+#: ../mowsterGlossay.php:487
+#: ../mowsterGlossay.php:496
+#: ../mowsterGlossay.php:527
+#: ../mowsterGlossay.php:896
 msgid "page"
 msgstr "parte"
 
-#: ../mowsterGlossay.php:496
+#: ../mowsterGlossay.php:508
 msgid "Read more..."
 msgstr "Ler mais..."
 
-#: ../mowsterGlossay.php:519
-msgid "Page"
-msgstr "Página: "
+#: ../mowsterGlossay.php:531
+msgid "Part"
+msgstr "parte"
 
-#: ../mowsterGlossay.php:546
+#: ../mowsterGlossay.php:558
 msgid "mowsterGlossary : Add term"
 msgstr "Adicionar Termo"
 
-#: ../mowsterGlossay.php:551
-#: ../mowsterGlossay.php:685
+#: ../mowsterGlossay.php:563
+#: ../mowsterGlossay.php:697
 msgid "Term:"
 msgstr "Termo:"
 
-#: ../mowsterGlossay.php:557
-#: ../mowsterGlossay.php:691
+#: ../mowsterGlossay.php:569
+#: ../mowsterGlossay.php:703
 msgid "Definition:"
 msgstr "Definição:"
 
-#: ../mowsterGlossay.php:594
+#: ../mowsterGlossay.php:606
 msgid "Save &raquo;"
 msgstr "Adicionar &raquo;"
 
-#: ../mowsterGlossay.php:613
-#: ../mowsterGlossay.php:744
+#: ../mowsterGlossay.php:625
+#: ../mowsterGlossay.php:756
 msgid "Error! Missing title."
 msgstr "Erro! Sem título."
 
-#: ../mowsterGlossay.php:622
-#: ../mowsterGlossay.php:750
+#: ../mowsterGlossay.php:634
+#: ../mowsterGlossay.php:762
 msgid "Error! Missing definition."
 msgstr "Erro! Sem definição."
 
-#: ../mowsterGlossay.php:633
-#: ../mowsterGlossay.php:758
+#: ../mowsterGlossay.php:645
+#: ../mowsterGlossay.php:770
 msgid "Error! Existing Term."
 msgstr "Erro! Termo já existente."
 
-#: ../mowsterGlossay.php:651
+#: ../mowsterGlossay.php:663
 #, php-format
 msgid "The Term %s was saved successfully."
 msgstr "Termo %s adicionado com sucesso!"
 
-#: ../mowsterGlossay.php:674
+#: ../mowsterGlossay.php:686
 msgid "mowsterGlossary : Edit term"
 msgstr "Editar Termo"
 
-#: ../mowsterGlossay.php:775
+#: ../mowsterGlossay.php:787
 #, php-format
 msgid "The Term %s was updated successfully."
 msgstr "O Termo %s foi actualizado com sucesso!"
 
-#: ../mowsterGlossay.php:802
+#: ../mowsterGlossay.php:814
 #, php-format
 msgid "The Term %s was deleted successfully."
 msgstr "Termo %s apagado com sucesso!"
 
-#: ../mowsterGlossay.php:1126
+#: ../mowsterGlossay.php:1138
 msgid "Edit this on Tools &raquo; Glossary."
 msgstr "Editar em Ferramentas &raquo; Glossário."
 
