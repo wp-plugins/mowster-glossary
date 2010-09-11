@@ -60,7 +60,7 @@
                 'post_date'             => date   ( 'Y-m-d H:i:s' ) ,
                 'post_date_gmt'         => gmdate ( 'Y-m-d H:i:s' ) ,
                 'post_content'          => '[[[mowsterGlossary]]]'  ,
-                'post_title'            => __ ( 'mowsterGlossary', 'mowsterGL' ),
+                'post_title'            => __ ( 'Glossary', 'mowsterGL' ),
                 'post_excerpt'          => ''                       ,
                 'post_status'           => 'publish'                ,
                 'comment_status'        => 'closed'                 ,
