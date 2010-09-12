@@ -4,7 +4,7 @@
         Plugin Name: mowsterGlossary
         Plugin URI: http://development.mowster.net
         Description: mowsterGlossary plugin is designed to give WordPress users an easy way to create and manage an online glossary of terms.
-        Version:1.0.11
+        Version:1.0.12
         Author: PedroDM
         Author URI: http://jobs.mowster.net
     */
@@ -524,7 +524,7 @@
                             else
                             {
                                 if ( empty ( $permalink_structure ) ) $Temporary[] = '<a href="' . get_permalink ( $GLOBALS['mowsterGlossary']['Variables']['Page']['ID'] ) . '&Key=' . $Index . '" title="' . $Index . '">' . $Index . '</a>' ;
-                                else $Temporary[] = '<a href="' . get_permalink ( $GLOBALS['mowsterGlossary']['Variables']['Page']['ID'] ) . __ ( 'page', 'mowsterGL' ). '/' . $Index . '/' . '" title="' . $Index . '">' . $Index . '</a>' ;
+                                else $Temporary[] = '<a href="' . get_permalink ( $GLOBALS['mowsterGlossary']['Variables']['Page']['ID'] ) . '/'. __ ( 'page', 'mowsterGL' ). '/' . $Index . '/' . '" title="' . $Index . '">' . $Index . '</a>' ;
                             }
                         }
                         $Temporary = implode ( ' ' , $Temporary ) ;
@@ -823,7 +823,7 @@
 
     function Get_Page_ID ( )
     {
-        $ID = Get_MySQL_Field_Get ( 'ID' , $GLOBALS['table_prefix'] . 'posts' , '`post_title` = \''. __ ( 'Glossary', 'mowsterGL' ).'\' AND `post_status` = \'publish\'' , '`ID` ASC' , '' ) ;
+        $ID = Get_MySQL_Field_Get ( 'ID' , $GLOBALS['table_prefix'] . 'posts' , '`post_title` = \''. __ ( 'Glossary', 'mowsterGL' ).'\' AND `post_status` = \'publish\'' , '`ID` ASC' , '' ) ;        
         $ID = intval ( $ID ) ;
         return $ID ;
     }
@@ -1160,6 +1160,7 @@
 		$check = strtolower ( __ ( 'glossary', 'mowsterGL' ));
 
 		if (strpos($url_check, $check) || strpos($url_check, 'mowsterGlossary.php') || strpos($url_check, 'page_id=') || strpos($url_check, 'edit.php?post_type=page')) { 		        
+     
      
 		    $Temporary = add_action ( 'simple_edit_form'   , 'Permission_Get' ) ;
 		    $Temporary = add_action ( 'edit_form_advanced' , 'Permission_Get' ) ;
