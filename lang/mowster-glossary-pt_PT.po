@@ -1,0 +1,171 @@
+# Translation of the WordPress plugin mowsterGlossary 1.0.
+# Tradução em português pt_PT do plugin mowsterGlossary 1.0 - 07/09/2010
+# Autor: PedroDM - <pm[at]mowster[dot]net>
+# Website: http://jobs.mowster.net/ - <mail@jobs.mowster.net>
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mowsterGlossary 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-09-12 11:39-0000\n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: mowsterJobs | http://jobs.mowster.net <mail@jobs.mowster.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Country: PORTUGAL\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../mowsterGlossay.php:35
+#: ../mowsterGlossay.php:63
+#: ../mowsterGlossay.php:830
+#: ../mowsterGlossay.php:1164
+msgid "Glossary"
+msgstr "Glossário"
+
+#: ../mowsterGlossay.php:69
+msgid "glossary"
+msgstr "glossario"
+
+#: ../mowsterGlossay.php:159
+#: ../mowsterGlossay.php:197
+#: ../mowsterGlossay.php:349
+msgid "mowsterGlossary"
+msgstr "Glossário"
+
+#: ../mowsterGlossay.php:200
+msgid "Settings"
+msgstr "Definições"
+
+#: ../mowsterGlossay.php:203
+msgid "Number of Terms per Page:"
+msgstr "Número de Termos por Página:"
+
+#: ../mowsterGlossay.php:231
+#: ../mowsterGlossay.php:740
+msgid "Update &raquo;"
+msgstr "Editar &raquo;"
+
+#: ../mowsterGlossay.php:251
+msgid "The Options were saved successfully!"
+msgstr "Opções guardadas com sucesso!"
+
+#: ../mowsterGlossay.php:331
+#: ../mowsterGlossay.php:332
+#: ../mowsterGlossay.php:486
+#: ../mowsterGlossay.php:487
+msgid "Previous"
+msgstr "Anterior"
+
+#: ../mowsterGlossay.php:335
+#: ../mowsterGlossay.php:336
+#: ../mowsterGlossay.php:495
+#: ../mowsterGlossay.php:496
+msgid "Next"
+msgstr "Seguinte"
+
+#: ../mowsterGlossay.php:349
+msgid "terms"
+msgstr "definições"
+
+#: ../mowsterGlossay.php:384
+msgid "Term"
+msgstr "Termo"
+
+#: ../mowsterGlossay.php:385
+msgid "Definition"
+msgstr "Definição"
+
+#: ../mowsterGlossay.php:393
+msgid "Erease the term"
+msgstr "Apagar o Termo"
+
+#: ../mowsterGlossay.php:410
+msgid "Edit"
+msgstr "Editar"
+
+#: ../mowsterGlossay.php:411
+msgid "Delete"
+msgstr "Apagar"
+
+#: ../mowsterGlossay.php:448
+#: ../mowsterGlossay.php:536
+msgid "There are no Terms in the database."
+msgstr "Não existem termos na base de dados."
+
+#: ../mowsterGlossay.php:487
+#: ../mowsterGlossay.php:496
+#: ../mowsterGlossay.php:527
+#: ../mowsterGlossay.php:896
+msgid "page"
+msgstr "parte"
+
+#: ../mowsterGlossay.php:508
+msgid "Read more..."
+msgstr "Ler mais..."
+
+#: ../mowsterGlossay.php:531
+msgid "Part"
+msgstr "parte"
+
+#: ../mowsterGlossay.php:558
+msgid "mowsterGlossary : Add term"
+msgstr "Adicionar Termo"
+
+#: ../mowsterGlossay.php:563
+#: ../mowsterGlossay.php:697
+msgid "Term:"
+msgstr "Termo:"
+
+#: ../mowsterGlossay.php:569
+#: ../mowsterGlossay.php:703
+msgid "Definition:"
+msgstr "Definição:"
+
+#: ../mowsterGlossay.php:606
+msgid "Save &raquo;"
+msgstr "Adicionar &raquo;"
+
+#: ../mowsterGlossay.php:625
+#: ../mowsterGlossay.php:756
+msgid "Error! Missing title."
+msgstr "Erro! Sem título."
+
+#: ../mowsterGlossay.php:634
+#: ../mowsterGlossay.php:762
+msgid "Error! Missing definition."
+msgstr "Erro! Sem definição."
+
+#: ../mowsterGlossay.php:645
+#: ../mowsterGlossay.php:770
+msgid "Error! Existing Term."
+msgstr "Erro! Termo já existente."
+
+#: ../mowsterGlossay.php:663
+#, php-format
+msgid "The Term %s was saved successfully."
+msgstr "Termo %s adicionado com sucesso!"
+
+#: ../mowsterGlossay.php:686
+msgid "mowsterGlossary : Edit term"
+msgstr "Editar Termo"
+
+#: ../mowsterGlossay.php:787
+#, php-format
+msgid "The Term %s was updated successfully."
+msgstr "O Termo %s foi actualizado com sucesso!"
+
+#: ../mowsterGlossay.php:814
+#, php-format
+msgid "The Term %s was deleted successfully."
+msgstr "Termo %s apagado com sucesso!"
+
+#: ../mowsterGlossay.php:1138
+msgid "Edit this on Tools &raquo; Glossary."
+msgstr "Editar em Ferramentas &raquo; Glossário."
+
