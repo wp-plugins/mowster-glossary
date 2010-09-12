@@ -1,5 +1,5 @@
-# Translation of the WordPress plugin mowsterGlossary 1.0.
-# Tradução em português pt_PT do plugin mowsterGlossary 1.0 - 07/09/2010
+# Translation of the WordPress plugin mowsterGlossary 1.0.1
+# Tradução em português pt_PT do plugin mowsterGlossary 1.0.1 - 12/09/2010
 # Autor: PedroDM - <pm[at]mowster[dot]net>
 # Website: http://jobs.mowster.net/ - <mail@jobs.mowster.net>
 #
