@@ -3,7 +3,7 @@ Contributors: PedroDM
 Tags: glossary,posts,terms,dictionary,definitions,gloss
 Requires at least: 3.0
 Tested up to: 3.0
-Stable tag: 1.0.1
+Stable tag: 1.0.11
 
 This plugin will create glossary functionalities in your wordpress blog.
 
@@ -31,14 +31,12 @@ Plugin site <a href="http://development.mowster.net">http://development.mowster.
 
 == Changelog ==
 
+= 1.0.11 =
+* Working in Internet Explorer
+
 = 1.0.1 =
 * Minor pt-PT bugs
 
 = 1.0 =
 * Initial release
 * Added localization (English, Portuguese)
-
-
-
-
-

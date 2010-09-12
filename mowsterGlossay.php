@@ -4,7 +4,7 @@
         Plugin Name: mowsterGlossary
         Plugin URI: http://development.mowster.net
         Description: mowsterGlossary plugin is designed to give WordPress users an easy way to create and manage an online glossary of terms.
-        Version:1.0.1
+        Version:1.0.11
         Author: PedroDM
         Author URI: http://jobs.mowster.net
     */
@@ -556,7 +556,7 @@
 
     <div class="wrap">
         <h2><?php echo __ ( 'mowsterGlossary : Add term', 'mowsterGL' ) ; ?></h2>
-        <form action="" method="post">
+        <form action="tools.php?page=<?php echo $_GET['page'] ; ?>" method="post">
             <fieldset class="options">
                 <table class="editform optiontable">
                     <tr>
@@ -590,10 +590,8 @@
 												});
 												</script>
 												
-												<form method="post" action="somepage">
-													<textarea name="Definition"><?php echo $_POST['Definition'];?>
-													</textarea>
-												</form>
+												<textarea name="Definition"><?php echo $_POST['Definition'];?>
+												</textarea>
                             
                         </td>
                     </tr>
@@ -689,7 +687,7 @@
 		        <p><strong><?php echo $error; ?></strong></p>
 		    </div>	
         <?php } ?>
-        <form action="" method="post">
+        <form action="tools.php?page=<?php echo $_GET['page'] ; ?>" method="post">
             <fieldset class="options">
                 <br>&nbsp;
                 <table class="editform optiontable">
@@ -723,10 +721,8 @@
 												});
 												</script>
 												
-												<form method="post" action="somepage">
-													<textarea id="Definition" name="Definition"><?php if (!$error) echo htmlentities ( $Term['Definition'] , ENT_QUOTES ); else echo htmlentities ( $_POST['Definition'] , ENT_QUOTES );  ?></textarea>
-													</textarea>
-												</form>
+												<textarea id="Definition" name="Definition"><?php if (!$error) echo htmlentities ( $Term['Definition'] , ENT_QUOTES ); else echo htmlentities ( $_POST['Definition'] , ENT_QUOTES );  ?></textarea>
+												</textarea>
                             
                         </td>
                     </tr>
