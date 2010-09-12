@@ -4,7 +4,7 @@
         Plugin Name: mowsterGlossary
         Plugin URI: http://development.mowster.net
         Description: mowsterGlossary plugin is designed to give WordPress users an easy way to create and manage an online glossary of terms.
-        Version:1.0
+        Version:1.0.1
         Author: PedroDM
         Author URI: http://jobs.mowster.net
     */
@@ -32,7 +32,7 @@
         $Temporary = update_option ( 'rewrite_rules' , '' ) ;
         $url_check = $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
         
-				$check = strtolower ( __ ( 'Glossary', 'mowsterGL' ));
+				$check = strtolower ( __ ( 'glossary', 'mowsterGL' ));
 
 				if (strpos($url_check, $check) || strpos($url_check, 'mowsterGlossary.php') || strpos($url_check, 'page_id=') || strpos($url_check, 'edit.php?post_type=page')) { 		        
 
@@ -1161,7 +1161,7 @@
     $Temporary = add_action ( 'admin_menu' , 'admin_menu' ) ;
 		$Temporary = add_action ( 'init' , 'Initialize' ) ; 
 		
-		$check = strtolower ( __ ( 'Glossary', 'mowsterGL' ));
+		$check = strtolower ( __ ( 'glossary', 'mowsterGL' ));
 
 		if (strpos($url_check, $check) || strpos($url_check, 'mowsterGlossary.php') || strpos($url_check, 'page_id=') || strpos($url_check, 'edit.php?post_type=page')) { 		        
      
