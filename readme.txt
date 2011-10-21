@@ -3,7 +3,7 @@ Contributors: PedroDM
 Tags: glossary,posts,terms,dictionary,definitions,gloss
 Requires at least: 3.0
 Tested up to: 3.2.1
-Stable tag: 2.0
+Stable tag: 2.0 
 
 Allows to manage and display a glossary in WordPress.
 
@@ -43,9 +43,12 @@ Plugin site <a href="http://development.mowster.net">http://development.mowster.
 2. Unzip the file.
 3. Upload `mowster-glossary` folder to the `/wp-content/plugins/` directory.
 4. Activate the plugin through the 'Plugins' menu in WordPress.
-5. Manage glossary: Tools -> Glossary
-6. Options: Settings -> Glossary
-7. Add shortcode to a page or post
+5. Manage glossary: Tools -> Glossary.
+6. Options: Settings -> Glossary.
+7. Add shortcode to a page or post.
+
+== Frequently Asked Questions ==
+
 
 == Screenshots ==
 
