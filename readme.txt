@@ -1,17 +1,36 @@
-=== mowster-Glossary ===
+=== mowsterGlossary ===
 Contributors: PedroDM
 Tags: glossary,posts,terms,dictionary,definitions,gloss
 Requires at least: 3.0
-Tested up to: 3.0
-Stable tag: 1.0.12
+Tested up to: 3.2.1
+Stable tag: 2.0
 
-This plugin will create glossary functionalities in your wordpress blog.
+Allows to manage and display a glossary in WordPress.
 
 == Description ==
 
-mowsterGlossary plugin is designed to give WordPress users an easy way to create and manage an online glossary of terms.
+mowsterGlossary plugin is designed to give WordPress users an easy way to create, manage and display an online glossary of terms. It has the ability to display the glossary just adding a `shortcode` to any page or page of the blog. See screenshots for more information.
 
-It creates automatically Glossary Page in your Blog. 
+
+= Instructions =
+* Manage glossary: Tools -> Glossary
+* Options: Settings -> Glossary
+* Add shortcode to a page or post to display the glossary
+
+= New in this version =
+* Full code structure rebuilt to work in WordPress 3.x versions
+* Shortcode tag to insert glossary in pages and post
+* Number of terms to be displayed per page
+* HTML allowed before/after term and description
+* Navigation customization
+
+
+= Got a bug? =
+* Forum - http://wordpress.org/tags/mowster-glossary?forum_id=10
+
+= Translations =
+* pt-PT
+
 
 Plugin site <a href="http://development.mowster.net">http://development.mowster.net</a>
 
@@ -21,15 +40,27 @@ Plugin site <a href="http://development.mowster.net">http://development.mowster.
 == Installation ==
 
 1. Download the mowster-glossary.zip file to your computer.
-1. Unzip the file.
-1. Upload `mowster-glossary` folder to the `/wp-content/plugins/` directory.
-1. Activate the plugin through the 'Plugins' menu in WordPress.
+2. Unzip the file.
+3. Upload `mowster-glossary` folder to the `/wp-content/plugins/` directory.
+4. Activate the plugin through the 'Plugins' menu in WordPress.
+5. Manage glossary: Tools -> Glossary
+6. Options: Settings -> Glossary
+7. Add shortcode to a page or post
 
 == Screenshots ==
 
-1. Glossary edition.
+1. Management.
+2. New Term form.
+3. Options.
 
 == Changelog ==
+
+= 2.0 =
+* Full code structure rebuilt to work in WordPress 3.x versions
+* Shortcode tag to insert glossary in pages and post
+* Number of terms to be displayed per page
+* HTML allowed before/after term and description
+* Navigation customization
 
 = 1.0.12 =
 * Permalink fix
@@ -42,4 +73,4 @@ Plugin site <a href="http://development.mowster.net">http://development.mowster.
 
 = 1.0 =
 * Initial release
-* Added localization (English, Portuguese)
+* Added localization (Portuguese)
