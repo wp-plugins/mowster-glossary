@@ -8,7 +8,7 @@ if (realpath(__FILE__) === realpath($_SERVER["SCRIPT_FILENAME"])) {
 
 if (mowsterG_html_decode($_POST['submit']) == mowsterG_html_decode(__('Save', 'mowsterGL'))) {
 	update_option('mowsterG_terms_per_page', $_REQUEST['terms_per_page_input']);
-	$_REQUEST['paged'] = 1;
+	$_REQUEST['paged'] = 1; 
 }
 
 require_once(MOWSTERG_PLUGIN_PATH .'/header.php');
@@ -31,7 +31,7 @@ $to_page_links = array(
 );
 
 if ($_REQUEST['action']) {
-	$to_page_links['base'] = str_replace(array('&action='.$_REQUEST['action'],'&term='.$_REQUEST['term']), '' , $to_page_links['base']);
+	$to_page_links['base'] = str_replace(array('&action='.$_GET['action'], '&term='.$_REQUEST['term']), '' , $to_page_links['base']);
 }
 
 $page_links = paginate_links($to_page_links);	
@@ -57,6 +57,7 @@ if ($terms){
 	$number_of_terms .= '<input type="text" name="terms_per_page_input" id="terms_per_page_input" value="'.$per_page.'"> '.__( 'terms per page', 'mowsterGL'); 
 	$number_of_terms .= '<a href="tools.php?page='.$page.'&terms_per_page=change" id="terms_per_page_submit">';
 	$number_of_terms .= '<input type="submit" value="'.__('Save', 'mowsterGL').'" name="submit" />'; 
+	$number_of_terms .= '<input type="hidden" name="action" value="list_terms" />'; 
 	$number_of_terms .= '</a>';
 	$number_of_terms .= '</form>';
 }
