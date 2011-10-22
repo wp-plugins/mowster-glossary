@@ -3,7 +3,7 @@ Contributors: PedroDM
 Tags: glossary,posts,terms,dictionary,definitions,gloss
 Requires at least: 3.0
 Tested up to: 3.2.1
-Stable tag: 2.0.1
+Stable tag: 2.0.11
 
 Allows to manage and display a glossary in WordPress.
 

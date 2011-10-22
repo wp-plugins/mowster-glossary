@@ -48,10 +48,10 @@ if( preg_match('/\['.$shortcode.'\]/', $newcontent) ) {
 	if ($page_links) {
 		$pagination_html = '<div class="page-link">';
 		$pagination_html .= sprintf( 
-			'<span id="mowsterG_display">' . __( 'Displaying', 'mowsterGL' ) . ' %s&#8211;%s ' . __( 'of', 'mowsterGL' ) . '  %s</span> %s',
+			'<span id="mowsterG_terms">%s ' . __( 'terms', 'mowsterGL' ) . '</span> <span id="mowsterG_interval">%s &#8211; %s</span> <span id="mowsterG_pages">%s</span>',
+			number_format_i18n( $nbr_terms ),
 			number_format_i18n( ( $paged - 1 ) * $per_page + 1 ),
 			number_format_i18n( min( $paged * $per_page, $nbr_terms ) ),
-			number_format_i18n( $nbr_terms ),
 			$page_links
 		); 
 		$pagination_html .= '</div>';
