@@ -4,12 +4,12 @@
 	Plugin Name: mowsterGlossary
 	Plugin URI: http://development.mowster.net
 	Description: mowsterGlossary plugin is designed to give WordPress users an easy way to create and manage an online glossary of terms.
-	Version: 2.0.11
+	Version: 2.0.12
 	Author: PedroDM
 	Author URI: http://jobs.mowster.net
 */
 
-define('MOWSTERG_VERSION', 			'2.0.11');
+define('MOWSTERG_VERSION', 			'2.0.12');
 define('MOWSTERG_URL_PATH', 		WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)));
 define('MOWSTERG_PLUGIN_PATH',		realpath(dirname(__FILE__)));
 define('MOWSTERG_TABLE',         	'mowster-glossary');
@@ -177,8 +177,8 @@ function mowsterG_url_list($rules){
 			} else {
 				$permalink_structure = get_option('permalink_structure');
 				$rule = str_replace(array('%year%'), '([0-9]{4})', $permalink_structure);
-				$rule = str_replace(array('%monthnum%', '%day%', '%hour%', '%minute%', '%second%'), '([0-9]{1,2})', get_option('permalink_structure'));
-				$rule = str_replace(array('%post_id%'), '([0-9]+)', get_option('permalink_structure'));				
+				$rule = str_replace(array('%monthnum%', '%day%', '%hour%', '%minute%', '%second%'), '([0-9]{1,2})', $rule);
+				$rule = str_replace(array('%post_id%'), '([0-9]+)', $rule);				
 				$rule = str_replace(array('%category%'), '(.+?)', $rule);
 				$rule = str_replace(array('%author%'), '([^/]+)', $rule);
 				$rule = str_replace('%postname%', '('.$post->post_name.')', $rule);
