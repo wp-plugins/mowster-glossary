@@ -40,7 +40,6 @@ if (mowsterG_html_decode($_POST['submit']) == mowsterG_html_decode(__('Confirm &
 		require_once( MOWSTERG_PLUGIN_PATH . '/tools/list_terms.php' );
 	}
 	
-	echo '</div>'; 
 } else {
 
 require_once( MOWSTERG_PLUGIN_PATH . '/header.php');
