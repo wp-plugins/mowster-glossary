@@ -1,19 +1,20 @@
 <?php
-
 /*
 	Plugin Name: mowsterGlossary
 	Plugin URI: http://development.mowster.net
 	Description: mowsterGlossary plugin is designed to give WordPress users an easy way to create and manage an online glossary of terms.
-	Version: 2.0.12
+	Version: 2.1
 	Author: PedroDM
 	Author URI: http://jobs.mowster.net
 */
 
-define('MOWSTERG_VERSION', 			'2.0.12');
+define('MOWSTERG_VERSION', 			'2.1');
 define('MOWSTERG_URL_PATH', 		WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)));
 define('MOWSTERG_PLUGIN_PATH',		realpath(dirname(__FILE__)));
 define('MOWSTERG_TABLE',         	'mowster-glossary');
 define('MOWSTERG_CHARSET',			get_bloginfo('charset'));
+define('MOWSTERG_MAIN_ACTION',		'mowsterG');
+define('MOWSTERG_ADD_ACTION',		'mowsterGadd');
 
 add_action('init', 'mowsterG_init');
 
@@ -63,45 +64,13 @@ function mowsterG_styles(){
 }
 
 function mowsterG_tools_scripts(){
-
-	if (function_exists('wp_tiny_mce')) {
-
-		add_filter('teeny_mce_before_init', create_function('$a', '
-
-			$a["theme"] = "advanced";
-			$a["skin"] = "wp_theme";
-			$a["height"] = "250";
-			$a["width"] = "600";
-			$a["onpageload"] = "";
-			$a["mode"] = "exact";
-			$a["elements"] = "new_mowsterG_definition";
-			$a["editor_selector"] = "theEditor";
-			$a["theme_advanced_buttons1"] = "bold,italic,underline,separator,bullist,numlist,separator,undo,redo,separator,copy,paste,separator,link,unlink,separator,pasteword,pastetext,separator,spellchecker,separator,fullscreen,separator,code";
-			$a["plugins"] = "fullscreen,inlinepopups,spellchecker,tabfocus,paste,wordpress,wplink,wpdialogs";		
-			
-			$a["forced_root_block"] = false;
-			$a["force_br_newlines"] = true;
-			$a["force_p_newlines"] = false;
-			$a["convert_newlines_to_brs"] = true;
-			
-			$a["apply_source_formatting"] = true;
-			$a["accessibility_focus"] = true;
 		
-			
-			$a["handle_node_change_callback"] = "update_tinycme_border";
-
-			return $a;'));
-
-		wp_tiny_mce(true, array("editor_selector" => "theEditor"));
-	}
-	
-
-		
-	if ($_REQUEST['action'] == 'new_term' && isset($_POST['submit']) === false) wp_enqueue_script('mowsterGL_js-new_term', MOWSTERG_URL_PATH . 'js/add.js', '', MOWSTERG_VERSION);
+	if ($_REQUEST['page'] == MOWSTERG_ADD_ACTION && isset($_POST['submit']) === false) wp_enqueue_script('mowsterGL_js-new_term', MOWSTERG_URL_PATH . 'js/add.js', '', MOWSTERG_VERSION);
 	elseif ($_REQUEST['action'] == 'edit_term' && isset($_POST['submit']) === false) wp_enqueue_script('mowsterGL_js-edit_term', MOWSTERG_URL_PATH . 'js/edit.js', '', MOWSTERG_VERSION);
 	else wp_enqueue_script('mowsterGL_js-list', MOWSTERG_URL_PATH . 'js/list.js', '', MOWSTERG_VERSION);
 	
 	$mowsterG_new_edit_term = array(
+		'mowsterG_term_default' => __('Type here the new term', 'mowsterGL'),
 		'mowsterG_term_lenght_error' => __('Term must be lower than 255 chars.', 'mowsterGL'),
 		'mowsterG_definition_error' => __('Definition cannot be blank.', 'mowsterGL'),
 		'mowsterG_admin_url' => get_admin_url(),
@@ -128,14 +97,24 @@ function mowsterG_admin_scripts(){
 }
 
 function mowsterG_admin_menu(){	
-	$tools_page = add_submenu_page('tools.php', __('Glossary','mowsterGL'), __('Glossary','mowsterGL'), 5, __FILE__, 'mowsterG_tools_menu');
+
 	$admin_page = add_submenu_page('options-general.php', 'mowsterGlossary', 'mowsterGlossary', 10, __FILE__, 'mowsterG_options_menu');
-	
-	add_action('admin_print_styles-' . $tools_page, 'mowsterG_styles'); 
-	add_action('admin_print_scripts-' . $tools_page, 'mowsterG_tools_scripts');
-	
 	add_action('admin_print_styles-' . $admin_page, 'mowsterG_styles'); 
 	add_action('admin_print_scripts-' . $admin_page, 'mowsterG_admin_scripts');
+	
+	$menu_page = add_utility_page( __('Glossary','mowsterGL'), __('Glossary','mowsterGL'), 5, MOWSTERG_MAIN_ACTION, 'mowsterG_tools_menu', MOWSTERG_URL_PATH.'images/icon_menu.png' );
+	add_action('admin_print_styles-' . $menu_page, 'mowsterG_styles'); 
+	add_action('admin_print_scripts-' . $menu_page, 'mowsterG_tools_scripts');
+
+	$tools1 = add_submenu_page('mowsterG', __('Terms','mowsterGL'), __('Terms','mowsterGL'), 5, MOWSTERG_MAIN_ACTION, 'mowsterG_tools_menu');
+	$tools2 = add_submenu_page('mowsterG', __('Add term','mowsterGL'), __('Add term','mowsterGL'), 5, MOWSTERG_ADD_ACTION, 'mowsterG_tools_menu_add');	
+		
+	add_action('admin_print_styles-' . $tools1, 'mowsterG_styles'); 
+	add_action('admin_print_scripts-' . $tools1, 'mowsterG_tools_scripts');
+	
+	add_action('admin_print_styles-' . $tools2, 'mowsterG_styles'); 
+	add_action('admin_print_scripts-' . $tools2, 'mowsterG_tools_scripts');
+	
 }
 add_action('admin_menu', 'mowsterG_admin_menu');
 
@@ -143,6 +122,11 @@ add_action('admin_menu', 'mowsterG_admin_menu');
 function mowsterG_tools_menu(){
 	require_once( MOWSTERG_PLUGIN_PATH . '/tools.php' );
 }
+
+function mowsterG_tools_menu_add(){
+	require_once( MOWSTERG_PLUGIN_PATH . '/tools.php' );
+}
+
 
 function mowsterG_options_menu(){
 	require_once( MOWSTERG_PLUGIN_PATH . '/options.php' );
@@ -159,6 +143,34 @@ function join_mowsterG_add_preview(){
 
 function mowsterG_html_decode($string){
 	return html_entity_decode($string, ENT_QUOTES, "".MOWSTERG_CHARSET."");
+}
+
+
+
+function tiny_mce_settings(){
+	$tiny_mce["theme"] = "advanced";
+	$tiny_mce["skin"] = "wp_theme";
+	$tiny_mce["height"] = "250";
+	$tiny_mce["width"] = "100%";
+	$tiny_mce["onpageload"] = "";
+	$tiny_mce["mode"] = "exact";
+	$tiny_mce["editor_selector"] = "theeditor";
+	$tiny_mce["theme_advanced_buttons1"] = "bold,italic,underline,separator,bullist,numlist,separator,undo,redo,separator,copy,paste,separator,link,unlink,separator,pasteword,pastetext,separator,spellchecker,separator,fullscreen";
+	$tiny_mce["theme_advanced_buttons2"] = "";
+	$tiny_mce["theme_advanced_buttons3"] = "";
+	$tiny_mce["plugins"] = "fullscreen,inlinepopups,spellchecker,tabfocus,paste,wordpress,wplink,wpdialogs";		
+	
+	$tiny_mce["forced_root_block"] = false;
+	$tiny_mce["force_br_newlines"] = false;
+	$tiny_mce["force_p_newlines"] = false;
+	$tiny_mce["convert_newlines_to_brs"] = false;
+	
+	$tiny_mce["apply_source_formatting"] = true;
+	$tiny_mce["accessibility_focus"] = true;
+
+	$tiny_mce["handle_node_change_callback"] = "update_tinycme_border";	
+	
+	return $tiny_mce;
 }
 
 

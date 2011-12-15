@@ -12,12 +12,12 @@ $table = $wpdb->prefix.MOWSTERG_TABLE;
 if ($_REQUEST['action'] == 'delete_term' && $wpdb->get_var($wpdb->prepare("SELECT COUNT(ID) FROM `$table` WHERE ID='".$_REQUEST['term']."'")) > 0) {
 
 	$term = $wpdb->get_results("SELECT Title FROM `$table` WHERE ID=".$_REQUEST['term']."");		
-	
+
 	$sql="DELETE FROM `$table` WHERE ID='".$_REQUEST['term']."'";
 	$delete = $wpdb->query($sql);
 
 	if ($delete){
-		echo '<div id="message" class="updated fade"><p>'.sprintf( __('Term %s was deleted successfully!', 'mowsterGL'), '<span id="mowsterG_upper">'.strtoupper($term[0]->title).'</span>').'</p></div>';		
+		echo '<div id="message" class="updated fade"><p>'.sprintf( __('Term %s was deleted successfully!', 'mowsterGL'), '<span id="mowsterG_upper">'.strtoupper($term[0]->Title).'</span>').'</p></div>';		
 		
 		// single term in last term deleted
 		$paged = $_REQUEST['paged']; $per_page = get_option('mowsterG_terms_per_page');

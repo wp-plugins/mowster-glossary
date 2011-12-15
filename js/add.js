@@ -6,7 +6,7 @@ jQuery(document).ready(function () {
 	
 		error = null;
 		
-		if (jQuery("#new_term").val()=="") {
+		if (jQuery("#new_term").val()=="" || jQuery("#new_term").val()==mowsterG.mowsterG_term_default) {
 			jQuery("#new_term").css('border-color','red');
 			error = 1;
 		}
@@ -104,7 +104,7 @@ jQuery.new_term_clean = function() {
 	
 
 function update_tinycme_border(){
-	document.getElementById('td_mowsterG_definition').style.borderColor="#DFDFDF";
+	document.getElementById('td_mowsterG_definition').style.borderColor="transparent";
 }
 
 

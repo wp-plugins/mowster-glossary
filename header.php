@@ -8,7 +8,7 @@ if (realpath(__FILE__) === realpath($_SERVER["SCRIPT_FILENAME"])) {
 
 ?>
 
-<a href="tools.php?page=<?php echo $page?>">
+<a href="admin.php?page=mowsterG">
 <div id="icon-glossary" class="icon32">
 	<br>
 </div>
@@ -28,10 +28,10 @@ if (realpath(__FILE__) === realpath($_SERVER["SCRIPT_FILENAME"])) {
 		$nbr_terms
 	);
 	?>
-	<a class="add-new-h2" href="tools.php?page=<?php echo $page?>">
+	<a class="add-new-h2" href="admin.php?page=<?php echo MOWSTERG_MAIN_ACTION;?>">
 		<?php echo $nbr_terms_print; ?>
 	</a>
-	<a class="add-new-h2" href="tools.php?page=<?php echo $page?>&action=new_term">
+	<a class="add-new-h2" href="admin.php?page=<?php echo MOWSTERG_ADD_ACTION;?>">
 		<?php _e('Add term', 'mowsterGL'); ?>
 	</a>
 	<a id="jobs" href="http://jobs.mowster.net" target="_blank">

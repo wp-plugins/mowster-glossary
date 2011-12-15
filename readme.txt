@@ -1,9 +1,9 @@
 === mowsterGlossary ===
 Contributors: PedroDM
 Tags: glossary,posts,terms,dictionary,definitions,gloss
-Requires at least: 3.0
-Tested up to: 3.2.1
-Stable tag: 2.0.12
+Requires at least: 3.3
+Tested up to: 3.3
+Stable tag: 2.1
 
 Allows to manage and display a glossary in WordPress.
 
@@ -11,18 +11,15 @@ Allows to manage and display a glossary in WordPress.
 
 mowsterGlossary plugin is designed to give WordPress users an easy way to create, manage and display an online glossary of terms. It has the ability to display the glossary just adding a `shortcode` to any page or page of the blog. See screenshots for more information.
 
+* For users with versions up to 3.2.1, install mowsterGlossary <a href="http://downloads.wordpress.org/plugin/mowster-glossary.2.0.12.zip">2.0.12</a>
 
 = Instructions =
-* Manage glossary: Tools -> Glossary
-* Options: Settings -> Glossary
+* Manage glossary: Glossary -> Terms | Add term
+* Options: Settings -> mowsterGlossary
 * Add shortcode to a page or post to display the glossary
 
 = New in this version =
-* Full code structure rebuilt to work in WordPress 3.x versions
-* Shortcode tag to insert glossary in pages and post
-* Number of terms to be displayed per page
-* HTML allowed before/after term and description
-* Navigation customization
+* Changed to work in WordPress 3.3 version
 
 
 = Got a bug? =
@@ -57,6 +54,10 @@ Plugin site <a href="http://development.mowster.net">http://development.mowster.
 3. Options.
 
 == Changelog ==
+
+= 2.1 =
+* Changed and tweaked to work in WordPress 3.3
+* minor Bug: Delete message fixed
 
 = 2.0.12 =
 * minor Bug: Permalink structure fixed

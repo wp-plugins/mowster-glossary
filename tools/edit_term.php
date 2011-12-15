@@ -40,8 +40,8 @@ if (mowsterG_html_decode($_POST['submit']) == mowsterG_html_decode(__('Confirm &
 		require_once( MOWSTERG_PLUGIN_PATH . '/tools/list_terms.php' );
 	}
 	
-	echo '</div>'; die();
-}
+	echo '</div>'; 
+} else {
 
 require_once( MOWSTERG_PLUGIN_PATH . '/header.php');
 
@@ -49,45 +49,38 @@ $term = $wpdb->get_results("SELECT * FROM `$table` WHERE ID='".$_REQUEST['term']
 
 ?>
 <form method="post" id="mowsterG_edit_preview" action="" autocomplete="off">
+	
 	<div id="poststuff" class="metabox-holder">
-		<div id="formatdiv" class="postbox ">
+		<div id="formatdiv" class="postbox" style="width: 600px;">
 			<h3 class="handle">
 				<span><?php _e('Edit term', 'mowsterGL'); ?> : <span class="edit_term_show"><?php echo $term[0]->Title; ?></span></span>
 			</h3>
-			<div class="inside">
-				<fieldset>
-					<table class="form-table" cellspacing="2" cellpadding="5" style="width: 100%;">
-						<tbody>
-						<tr class="form-field">
-							<th valign="top" scope="row"><label for="edit_term"><?php _e('Term', 'mowsterGL'); ?>:</label></th>
-							<td>
-								<input type="text" id="edit_term" name="edit_term" value="<?php echo $term[0]->Title; ?>" />
-								<div id="edit_term_show"></div>
-								<div id="edit_term_error"></div>
-							</td>
-						</tr>
-						<tr class="form-field">
-							<th valign="top" scope="row"><label for="edit_mowsterG_definition"><?php _e('Definition', 'mowsterGL'); ?>:</label></th>
-							<td>				
-								<div id="td_mowsterG_definition">
-									<textarea id="new_mowsterG_definition" name="edit_mowsterG_definition" class="theEditor"><?php echo esc_textarea($term[0]->Definition); ?></textarea>
-								</div>
-								<div id="edit_definition_show"></div>
-							</td>
-						</tr>
-						<tr>
-							<th valign="top" scope="row"></th>
-							<td class="submit">				
-								<input type="submit" name="submit" id="edit_term_st" value="<?php _e('Edit', 'mowsterGL'); ?>" /><img src="<?php echo admin_url(); ?>images/wpspin_light.gif" alt="" class="ajaxsave" style="display: none;" />
-								<input type="button" name="edit_term_edit" id="edit_term_edit" value="<?php _e('Edit', 'mowsterGL'); ?>" style="display: none;" />
-								<input type="submit" name="submit" id="edit_term_submit" class="button-primary" value="<?php _e('Confirm &raquo;', 'mowsterGL'); ?>" style="display: none;" />
-								<input type="hidden" name="edit_term_id" id="edit_term_id" value="<?php echo $term[0]->ID; ?>" />
-							</td>
-						</tr>						
-						</tbody>
-					</table>
-				</fieldset>
-			</div>
 		</div>
 	</div>
+
+	<div class="inside">
+		<fieldset>				
+			<input type="text" id="edit_term" name="edit_term" value="<?php echo $term[0]->Title; ?>" />
+			<div id="edit_term_show"></div>
+			<div id="edit_term_error"></div>
+			
+			<div id="td_mowsterG_definition">
+				<?php 		
+				$tiny_mce = tiny_mce_settings();								
+				wp_editor($term[0]->Definition, 'new_mowsterG_definition', array('wpautop' => true, 'textarea_name' => 'edit_mowsterG_definition', 'media_buttons' => false, "tinymce" => $tiny_mce)); 
+				?>
+			</div>
+			<div id="edit_definition_show"></div>
+					
+			<div class="submit">	
+				<input type="submit" name="submit" id="edit_term_st" value="<?php _e('Edit', 'mowsterGL'); ?>" /><img src="<?php echo admin_url(); ?>images/wpspin_light.gif" alt="" class="ajaxsave" style="display: none;" />
+				<input type="button" name="edit_term_edit" id="edit_term_edit" value="<?php _e('Edit', 'mowsterGL'); ?>" style="display: none;" />
+				<input type="submit" name="submit" id="edit_term_submit" class="button-primary" value="<?php _e('Confirm &raquo;', 'mowsterGL'); ?>" style="display: none;" />
+				<input type="hidden" name="edit_term_id" id="edit_term_id" value="<?php echo $term[0]->ID; ?>" />
+			</div>	
+		</fieldset>
+	</div>
+
 </form>
+
+<?php } ?>

@@ -32,7 +32,9 @@ $to_page_links = array(
 
 if ($_REQUEST['action']) {
 	$to_page_links['base'] = str_replace(array('&action='.$_GET['action'], '&term='.$_REQUEST['term']), '' , $to_page_links['base']);
-}
+} 
+
+if ($_GET['page'] != MOWSTERG_MAIN_ACTION) $to_page_links['base'] = str_replace('page='.$_GET['page'], 'page='.MOWSTERG_MAIN_ACTION, $to_page_links['base']);
 
 $page_links = paginate_links($to_page_links);	
 
@@ -55,7 +57,7 @@ if ($page_links) {
 if ($terms){
 	$number_of_terms = '<form method="post" id="mowsterG_number_terms" action="" autocomplete="off">';
 	$number_of_terms .= '<input type="text" name="terms_per_page_input" id="terms_per_page_input" value="'.$per_page.'"> '.__( 'terms per page', 'mowsterGL'); 
-	$number_of_terms .= '<a href="tools.php?page='.$page.'&terms_per_page=change" id="terms_per_page_submit">';
+	$number_of_terms .= '<a href="admin.php?page='.MOWSTERG_MAIN_ACTION.'&terms_per_page=change" id="terms_per_page_submit">';
 	$number_of_terms .= '<input type="submit" value="'.__('Save', 'mowsterGL').'" name="submit" />'; 
 	$number_of_terms .= '<input type="hidden" name="action" value="list_terms" />'; 
 	$number_of_terms .= '</a>';
@@ -91,14 +93,14 @@ if ($terms){
 						<div id="<?php echo $term->ID;?>">
 						<td style="width: 65px;">
 							<div id="delete-<?php echo $term->ID;?>">
-								<a href="tools.php?page=<?php echo $page?>&action=delete_term&term=<?php echo $term->ID; ?>&paged=<?php echo $paged; ?>" onClick="return confirmDelete('<?php echo strtoupper($term->Title); ?>')">
+								<a href="admin.php?page=<?php echo MOWSTERG_MAIN_ACTION; ?>&action=delete_term&term=<?php echo $term->ID; ?>&paged=<?php echo $paged; ?>" onClick="return confirmDelete('<?php echo strtoupper($term->Title); ?>')">
 									<input type="button" id="delete" class="button-secondary action" value="<?php _e( 'Delete', 'mowsterGL' ); ?>" name="submit" />
 								</a>
 							</div>
 						</td>
 						<td style="width: 65px;">
 							<div id="edit-<?php echo $term->ID;?>">
-								<a href="tools.php?page=<?php echo $page?>&action=edit_term&term=<?php echo $term->ID; ?>">							
+								<a href="admin.php?page=<?php echo MOWSTERG_MAIN_ACTION; ?>&action=edit_term&term=<?php echo $term->ID; ?>">							
 									<input type="button" id="edit" class="button-secondary action" value="<?php _e( 'Edit', 'mowsterGL' ); ?>" name="submit"/>
 								</a>
 							</div>

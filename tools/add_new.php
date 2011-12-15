@@ -35,51 +35,46 @@ if (mowsterG_html_decode($_POST['submit']) == mowsterG_html_decode(__('Add &raqu
 		require_once( MOWSTERG_PLUGIN_PATH . '/tools/list_terms.php' );
 	}
 	
-	echo '</div>'; die();
-}
+	echo '</div>'; 
+} else {
+
 
 require_once( MOWSTERG_PLUGIN_PATH . '/header.php');
 
+
 ?>
 <form method="post" id="mowsterG_add_preview" action="" autocomplete="off">
+	
 	<div id="poststuff" class="metabox-holder">
-		<div id="formatdiv" class="postbox ">
+		<div id="formatdiv" class="postbox" style="width: 600px;">
 			<h3 class="handle">
 				<span><?php _e('New term', 'mowsterGL'); ?></span>
 			</h3>
-			<div class="inside">
-				<fieldset>
-					<table class="form-table" cellspacing="2" cellpadding="5" style="width: 100%;">
-						<tbody>
-						<tr class="form-field">
-							<th valign="top" scope="row"><label for="new_term"><?php _e('Term', 'mowsterGL'); ?>:</label></th>
-							<td>
-								<input type="text" id="new_term" name="new_term" value="" />
-								<div id="new_term_show"></div>
-								<div id="new_term_error"></div>
-							</td>
-						</tr>
-						<tr class="form-field">
-							<th valign="top" scope="row"><label for="new_mowsterG_definition"><?php _e('Definition', 'mowsterGL'); ?>:</label></th>
-							<td>				
-								<div id="td_mowsterG_definition">
-									<textarea id="new_mowsterG_definition" name="new_mowsterG_definition" class="theEditor"></textarea>
-								</div>
-								<div id="new_definition_show"></div>
-							</td>
-						</tr>
-						<tr>
-							<th valign="top" scope="row"></th>
-							<td class="submit">				
-								<input type="submit" name="submit" id="add_new" value="<?php _e('Add &raquo;', 'mowsterGL'); ?>" /><img src="<?php echo admin_url(); ?>images/wpspin_light.gif" alt="" class="ajaxsave" style="display: none;" />
-								<input type="button" name="add_new_edit" id="add_new_edit" value="<?php _e('Edit', 'mowsterGL'); ?>" style="display: none;" />
-								<input type="submit" name="submit" id="add_new_submit" class="button-primary" value="<?php _e('Add &raquo;', 'mowsterGL'); ?>" style="display: none;" />
-							</td>
-						</tr>						
-						</tbody>
-					</table>
-				</fieldset>
-			</div>
 		</div>
 	</div>
+
+	<div class="inside">
+		<fieldset>				
+			<input type="text" id="new_term" name="new_term" value="" onblur="if (this.value == '') {this.value = '<?php _e('Type here the new term', 'mowsterGL'); ?>'; this.style.color='#BBBBBB';}" onfocus="if (this.value == '<?php _e('Type here the new term', 'mowsterGL'); ?>') {this.value = ''; this.style.color='#000000';}" />
+			<div id="new_term_show"></div>
+			<div id="new_term_error"></div>
+			
+			<div id="td_mowsterG_definition">
+				<?php	
+				$tiny_mce = tiny_mce_settings();								
+				wp_editor('', 'new_mowsterG_definition', array('wpautop' => true, 'textarea_name' => 'new_mowsterG_definition', 'media_buttons' => false, "tinymce" => $tiny_mce)); 
+				?>
+			</div>
+			<div id="new_definition_show"></div>
+					
+			<div class="submit">	
+				<input type="submit" name="submit" id="add_new" value="<?php _e('Add &raquo;', 'mowsterGL'); ?>" /><img src="<?php echo admin_url(); ?>images/wpspin_light.gif" alt="" class="ajaxsave" style="display: none;" />
+				<input type="button" name="add_new_edit" id="add_new_edit" value="<?php _e('Edit', 'mowsterGL'); ?>" style="display: none;" />
+				<input type="submit" name="submit" id="add_new_submit" class="button-primary" value="<?php _e('Add &raquo;', 'mowsterGL'); ?>" style="display: none;" />
+			</div>	
+		</fieldset>
+	</div>
+		
 </form>
+
+<?php } ?>

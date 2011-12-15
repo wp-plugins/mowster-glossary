@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: mowsterGlossary 2.0\n"
+"Project-Id-Version: mowsterGlossary 2.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2011-10-14 01:28-0000\n"
 "PO-Revision-Date: \n"
@@ -20,7 +20,7 @@ msgstr ""
 
 #@ mowsterGL
 #: header.php:18
-#: index.php:131
+#: index.php:105
 msgid "Glossary"
 msgstr "Glossário"
 
@@ -34,32 +34,33 @@ msgstr[1] "%d termos"
 
 #@ mowsterGL
 #: header.php:35
+#: index.php:110
 msgid "Add term"
 msgstr "Adicionar termo"
 
 #@ mowsterGL
-#: index.php:105
+#: index.php:74
 msgid "Term must be lower than 255 chars."
 msgstr "Termo deve ser inferior a 255 caracteres."
 
 #@ mowsterGL
-#: index.php:106
+#: index.php:75
 msgid "Definition cannot be blank."
 msgstr "Definição não pode ser nula."
 
 #@ mowsterGL
-#: index.php:113
+#: index.php:82
 msgid "Atention! This action will change the numbers of terms displayed in the public glossary. Show "
 msgstr "Atenção! Esta ação irá alterar o número de termos mostrados no glossário. Mostrar "
 
 #@ mowsterGL
-#: index.php:114
-#: tools/list_terms.php:57
+#: index.php:83
+#: tools/list_terms.php:59
 msgid "terms per page"
 msgstr "termos por página"
 
 #@ mowsterGL
-#: index.php:115
+#: index.php:84
 msgid "Erease the term"
 msgstr "Apagar o termo"
 
@@ -69,7 +70,7 @@ msgstr "Apagar o termo"
 #: options.php:169
 #: options.php:248
 #: tools/list_terms.php:9
-#: tools/list_terms.php:59
+#: tools/list_terms.php:61
 msgid "Save"
 msgstr "Guardar"
 
@@ -117,9 +118,7 @@ msgstr "Personalizar a exibição"
 
 #@ mowsterGL
 #: options.php:111
-#: tools/add_new.php:55
-#: tools/edit_term.php:62
-#: tools/list_terms.php:79
+#: tools/list_terms.php:81
 msgid "Term"
 msgstr "Termo"
 
@@ -188,8 +187,8 @@ msgstr "Restabelecer valores padrão"
 
 #@ mowsterGL
 #: tools/add_new.php:9
-#: tools/add_new.php:74
-#: tools/add_new.php:76
+#: tools/add_new.php:71
+#: tools/add_new.php:73
 msgid "Add &raquo;"
 msgstr "Adicionar &raquo;"
 
@@ -205,22 +204,20 @@ msgid "mySQL error! It was not possible to add the term into the database."
 msgstr "Erro mySQL! Não foi possível adicionar o termo na base de dados."
 
 #@ mowsterGL
-#: tools/add_new.php:48
+#: tools/add_new.php:51
 msgid "New term"
 msgstr "Novo termo"
 
 #@ mowsterGL
-#: tools/add_new.php:63
-#: tools/edit_term.php:70
-#: tools/list_terms.php:79
+#: tools/list_terms.php:81
 msgid "Definition"
 msgstr "Definição"
 
 #@ mowsterGL
-#: tools/add_new.php:75
-#: tools/edit_term.php:81
-#: tools/edit_term.php:82
-#: tools/list_terms.php:102
+#: tools/add_new.php:72
+#: tools/edit_term.php:76
+#: tools/edit_term.php:77
+#: tools/list_terms.php:104
 msgid "Edit"
 msgstr "Editar"
 
@@ -242,7 +239,7 @@ msgstr "Erro! Sem definição."
 
 #@ mowsterGL
 #: tools/edit_term.php:9
-#: tools/edit_term.php:83
+#: tools/edit_term.php:78
 msgid "Confirm &raquo;"
 msgstr "Confirmar &raquo;"
 
@@ -258,7 +255,7 @@ msgid "mySQL error! It was not possible to update the term in the database."
 msgstr "Erro mySQL! Não é possível atualizar o termo na base de dados."
 
 #@ mowsterGL
-#: tools/edit_term.php:55
+#: tools/edit_term.php:56
 msgid "Edit term"
 msgstr "Editar termo"
 
@@ -273,12 +270,12 @@ msgid "&raquo;"
 msgstr "&raquo;"
 
 #@ mowsterGL
-#: tools/list_terms.php:95
+#: tools/list_terms.php:97
 msgid "Delete"
 msgstr "Apagar"
 
 #@ mowsterGL
-#: tools/list_terms.php:117
+#: tools/list_terms.php:119
 msgid "There are no Terms in the database."
 msgstr "Não existem Termos na base de dados."
 
@@ -289,7 +286,7 @@ msgid "already exists!"
 msgstr "já existe!"
 
 #@ mowsterGL
-#: index.php:125
+#: index.php:94
 msgid "Are you sure you want to restore the dafaults"
 msgstr "Tem a certeza que deseja restabelecer os valores padrão"
 
@@ -304,12 +301,12 @@ msgid "Page 2 URL example"
 msgstr "Página 2, exemplo de URL"
 
 #@ mowsterGL
-#: tools/list_terms.php:43
+#: tools/list_terms.php:45
 msgid "Displaying"
 msgstr "Mostrando"
 
 #@ mowsterGL
-#: tools/list_terms.php:43
+#: tools/list_terms.php:45
 msgid "of"
 msgstr "de"
 
@@ -317,4 +314,15 @@ msgstr "de"
 #: shortcode.php:51
 msgid "terms"
 msgstr "termos"
+
+#@ mowsterGL
+#: index.php:73
+#: tools/add_new.php:58
+msgid "Type here the new term"
+msgstr "Introduza aqui o novo termo"
+
+#@ mowsterGL
+#: index.php:109
+msgid "Terms"
+msgstr "Termos"
 

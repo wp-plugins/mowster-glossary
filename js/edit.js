@@ -107,5 +107,5 @@ jQuery.edit_term_clean = function() {
 	
 
 function update_tinycme_border(){
-	document.getElementById('td_mowsterG_definition').style.borderColor="#DFDFDF";
+	document.getElementById('td_mowsterG_definition').style.borderColor="transparent";
 }

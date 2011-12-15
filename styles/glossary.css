@@ -2,7 +2,7 @@
     background: url("../images/icon.jpg") no-repeat;
 }
 
-.term_show, #new_term_show, #edit_term_show, .edit_term_show, #mowsterG_upper{
+.term_show, #new_term_show, #edit_term_show, .edit_term_show, #mowsterG_upper, input#edit_term{
 	text-transform: uppercase;
 }
 
@@ -15,8 +15,12 @@
 	font-weight: bold;
 }
 
-input#new_term, input#edit_term{
-	width: 600px; text-transform: uppercase;
+input#new_term, input#edit_term, #edit_definition_show, #new_definition_show{
+	width: 600px;
+}
+
+#new_definition_show{
+	padding-top: 12px;
 }
 
 input#terms_per_page_input{
@@ -31,12 +35,11 @@ div#terms_per_page{
 }
 
 #td_mowsterG_definition{
-	border-color: #CCCCCC #CCCCCC #DFDFDF;
+	border-color: transparent;
 	border-collapse: separate;
     border-radius: 3px 3px 0 0;
     border-style: solid;
     border-width: 1px;
-	background-color: #FFFFFF;
 	width: 600px;
 	z-index: 100;
 }
