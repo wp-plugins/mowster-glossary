@@ -75,9 +75,7 @@ if ($terms){
 		<table border="1" class="widefat compact">
 			<thead>                
 				<tr>
-					<th class="manage-column" style="width: 65px;"></th>
-					<th class="manage-column" style="width: 65px;"></th>
-					<th class="manage-column" style="width: 65px;">ID</th>
+					<th class="manage-column" style="width: 95px;">ID</th>
 					<th class="manage-column"><?php _e( 'Term', 'mowsterGL'); ?> | <?php _e( 'Definition', 'mowsterGL' ); ?></th>
 				</tr>
 			</thead>
@@ -91,25 +89,22 @@ if ($terms){
 					?>
 					<tr class="<?php echo $rowclass.' ';?>term" id="<?php echo $term->ID;?>">
 						<div id="<?php echo $term->ID;?>">
-						<td style="width: 65px;">
-							<div id="delete-<?php echo $term->ID;?>">
-								<a href="admin.php?page=<?php echo MOWSTERG_MAIN_ACTION; ?>&action=delete_term&term=<?php echo $term->ID; ?>&paged=<?php echo $paged; ?>" onClick="return confirmDelete('<?php echo strtoupper($term->Title); ?>')">
-									<input type="button" id="delete" class="button-secondary action" value="<?php _e( 'Delete', 'mowsterGL' ); ?>" name="submit" />
-								</a>
-							</div>
-						</td>
-						<td style="width: 65px;">
-							<div id="edit-<?php echo $term->ID;?>">
-								<a href="admin.php?page=<?php echo MOWSTERG_MAIN_ACTION; ?>&action=edit_term&term=<?php echo $term->ID; ?>">							
-									<input type="button" id="edit" class="button-secondary action" value="<?php _e( 'Edit', 'mowsterGL' ); ?>" name="submit"/>
-								</a>
-							</div>
-						</td>
 						<td>
-							<?php echo $term->ID;?>
+							<?php echo $term->ID;?><br />
+							<div class="actions">
+								<span id="delete-<?php echo $term->ID;?>" class="trash">
+									<a href="admin.php?page=<?php echo MOWSTERG_MAIN_ACTION; ?>&action=delete_term&term=<?php echo $term->ID; ?>&paged=<?php echo $paged; ?>" onClick="return confirmDelete('<?php echo strtoupper($term->Title); ?>')"><?php _e( 'Delete', 'mowsterGL' ); ?></a> | 
+								</span>							
+								<span id="edit-<?php echo $term->ID;?>" class="edit">
+									<a href="admin.php?page=<?php echo MOWSTERG_MAIN_ACTION; ?>&action=edit_term&term=<?php echo $term->ID; ?>"><?php _e( 'Edit', 'mowsterGL' ); ?></a>
+								</span>
+							</div>
 						</td>						
-						<td>
-						<?php echo '<div class="term_show" id="term_show_'.$term->ID.'">'.$term->Title.'</div>';?><div><?php echo nl2br($term->Definition);?></div>
+						<td>							
+							<?php echo '<div class="term_show" id="term_show_'.$term->ID.'">'.$term->Title.'</div>';?>						
+							<div>
+								<?php echo nl2br($term->Definition);?>
+							</div>
 						</td>						
 						</div>
 					</tr>
@@ -123,7 +118,7 @@ if ($terms){
 
 			<tfoot>                
 				<tr>
-					<th class="manage-column" colspan="4"><div id="terms_per_page"><?php echo $number_of_terms; ?></div></th>
+					<th class="manage-column" colspan="2"><div id="terms_per_page"><?php echo $number_of_terms; ?></div></th>
 				</tr>
 			</tfoot>			
 		</table>

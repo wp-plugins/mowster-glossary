@@ -21,10 +21,11 @@ jQuery(document).ready(function () {
 		
 		jQuery('.term').each(function(i) {  
 			var tr = jQuery(this).closest('tr');			
-			jQuery('#edit-'+tr[0].id).hide();	
-			jQuery('#delete-'+tr[0].id).hide();			
+			jQuery('#edit-'+tr[0].id).hide();
+			jQuery('#delete-'+tr[0].id).hide();
+			jQuery('.actions').css('display', 'inline');
 		});
-
+		
 		jQuery('tr').mouseover(function() { 						
 			var tr = jQuery(this).closest('tr');
 			jQuery('#edit-'+tr[0].id).show();

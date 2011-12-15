@@ -52,4 +52,8 @@ div#terms_per_page{
     font-family: Consolas,Monaco,monospace;
 }
 
+.actions {
+	display:none;
+}
+
 
