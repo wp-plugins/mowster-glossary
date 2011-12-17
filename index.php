@@ -3,12 +3,12 @@
 	Plugin Name: mowsterGlossary
 	Plugin URI: http://development.mowster.net
 	Description: mowsterGlossary plugin is designed to give WordPress users an easy way to create and manage an online glossary of terms.
-	Version: 2.1.2
+	Version: 2.1.21
 	Author: PedroDM
 	Author URI: http://jobs.mowster.net
 */
 
-define('MOWSTERG_VERSION', 			'2.1.2');
+define('MOWSTERG_VERSION', 			'2.1.21');
 define('MOWSTERG_URL_PATH', 		WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)));
 define('MOWSTERG_PLUGIN_PATH',		realpath(dirname(__FILE__)));
 define('MOWSTERG_TABLE',         	'mowster-glossary');
@@ -102,7 +102,7 @@ function mowsterG_admin_menu(){
 	add_action('admin_print_styles-' . $admin_page, 'mowsterG_styles'); 
 	add_action('admin_print_scripts-' . $admin_page, 'mowsterG_admin_scripts');
 	
-	$menu_page = add_utility_page( __('Glossary','mowsterGL'), __('Glossary','mowsterGL'), 5, MOWSTERG_MAIN_ACTION, 'mowsterG_tools_menu', MOWSTERG_URL_PATH.'images/icon_menu.png' );
+	$menu_page = add_utility_page( __('Glossary','mowsterGL'), __('Glossary','mowsterGL'), 5, MOWSTERG_MAIN_ACTION, 'mowsterG_tools_menu', 'div' );
 	add_action('admin_print_styles-' . $menu_page, 'mowsterG_styles'); 
 	add_action('admin_print_scripts-' . $menu_page, 'mowsterG_tools_scripts');
 
@@ -117,6 +117,11 @@ function mowsterG_admin_menu(){
 	
 }
 add_action('admin_menu', 'mowsterG_admin_menu');
+
+function mowsterG_admin_head(){
+	wp_enqueue_style('mowsterG-admin', MOWSTERG_URL_PATH . 'styles/admin.css', '', MOWSTERG_VERSION);
+}
+add_filter('admin_head', 'mowsterG_admin_head');
 
 
 function mowsterG_tools_menu(){

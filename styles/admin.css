@@ -1,0 +1,9 @@
+.toplevel_page_mowsterG  div.wp-menu-image{
+	background-image: url("../images/icon_menu.png");
+	background-position: -1px -33px;
+}
+
+.toplevel_page_mowsterG:hover div.wp-menu-image,
+.toplevel_page_mowsterG .wp-has-current-submenu div.wp-menu-image {
+	background-position: -1px -1px;
+}
