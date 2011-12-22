@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: mowsterGlossary 2.1.21\n"
+"Project-Id-Version: mowsterGlossary 2.1.3\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-12-17 17:40-0000\n"
+"POT-Creation-Date: 2011-12-22 14:48-0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: mwJobs | http://jobs.mowster.net <jobs@mowster.net>\n"
@@ -20,7 +20,7 @@ msgstr ""
 
 # @ mowsterGL
 #: ../header.php:18
-#: ../index.php:105
+#: ../index.php:112
 msgid "Glossary"
 msgstr "Glossário"
 
@@ -34,49 +34,49 @@ msgstr[1] "%d termos"
 
 # @ mowsterGL
 #: ../header.php:35
-#: ../index.php:110
+#: ../index.php:117
 msgid "Add term"
 msgstr "Adicionar termo"
 
 # @ mowsterGL
-#: ../index.php:73
+#: ../index.php:80
 #: ../tools/add_new.php:57
 msgid "Type here the new term"
 msgstr "Introduza aqui o novo termo"
 
 # @ mowsterGL
-#: ../index.php:74
+#: ../index.php:81
 msgid "Term must be lower than 255 chars."
 msgstr "Termo deve ser inferior a 255 caracteres."
 
 # @ mowsterGL
-#: ../index.php:75
+#: ../index.php:82
 msgid "Definition cannot be blank."
 msgstr "Definição não pode ser nula."
 
 # @ mowsterGL
-#: ../index.php:82
+#: ../index.php:89
 msgid "Atention! This action will change the numbers of terms displayed in the public glossary. Show "
 msgstr "Atenção! Esta ação irá alterar o número de termos mostrados no glossário. Mostrar "
 
 # @ mowsterGL
-#: ../index.php:83
+#: ../index.php:90
 #: ../tools/list_terms.php:59
 msgid "terms per page"
 msgstr "termos por página"
 
 # @ mowsterGL
-#: ../index.php:84
+#: ../index.php:91
 msgid "Erease the term"
 msgstr "Apagar o termo"
 
 # @ mowsterGL
-#: ../index.php:94
+#: ../index.php:101
 msgid "Are you sure you want to restore the dafaults"
 msgstr "Tem a certeza que deseja restabelecer os valores padrão"
 
 # @ mowsterGL
-#: ../index.php:109
+#: ../index.php:116
 msgid "Terms"
 msgstr "Termos"
 
