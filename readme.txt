@@ -2,8 +2,8 @@
 Contributors: PedroDM
 Tags: glossary,posts,terms,dictionary,definitions,gloss
 Requires at least: 3.3
-Tested up to: 3.3
-Stable tag: 2.2
+Tested up to: 3.3.2
+Stable tag: 2.3
 
 Allows to manage and display a glossary in WordPress.
 
@@ -54,6 +54,10 @@ Plugin site <a href="http://development.mowster.net">http://development.mowster.
 3. Options.
 
 == Changelog ==
+
+= 2.3 =
+* Icon fix
+* Menu optimized
 
 = 2.2 =
 * Security improvement

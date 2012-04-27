@@ -3,7 +3,7 @@
 	Plugin Name: mowsterGlossary
 	Plugin URI: http://development.mowster.net
 	Description: mowsterGlossary plugin is designed to give WordPress users an easy way to create and manage an online glossary of terms.
-	Version: 2.2
+	Version: 2.3
 	Author: PedroDM
 	Author URI: http://jobs.mowster.net
 */
@@ -15,7 +15,7 @@ if (realpath(__FILE__) === realpath($_SERVER["SCRIPT_FILENAME"])) {
 	die();
 }
 
-define('MOWSTERG_VERSION', 			'2.2');
+define('MOWSTERG_VERSION', 			'2.3');
 define('MOWSTERG_URL_PATH', 		WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)));
 define('MOWSTERG_PLUGIN_PATH',		realpath(dirname(__FILE__)));
 define('MOWSTERG_TABLE',         	'mowster-glossary');
@@ -109,26 +109,20 @@ function mowsterG_admin_menu(){
 	add_action('admin_print_styles-' . $admin_page, 'mowsterG_styles'); 
 	add_action('admin_print_scripts-' . $admin_page, 'mowsterG_admin_scripts');
 	
-	$menu_page = add_utility_page( __('Glossary','mowsterGL'), __('Glossary','mowsterGL'), 5, MOWSTERG_MAIN_ACTION, 'mowsterG_tools_menu', 'div' );
+	$menu_page = add_utility_page( __('Glossary','mowsterGL'), __('Glossary','mowsterGL'), 5, MOWSTERG_MAIN_ACTION, 'mowsterG_tools_menu', MOWSTERG_URL_PATH . '/images/menu_icon.png' );
 	add_action('admin_print_styles-' . $menu_page, 'mowsterG_styles'); 
 	add_action('admin_print_scripts-' . $menu_page, 'mowsterG_tools_scripts');
 
-	$tools1 = add_submenu_page('mowsterG', __('Terms','mowsterGL'), __('Terms','mowsterGL'), 5, MOWSTERG_MAIN_ACTION, 'mowsterG_tools_menu');
-	$tools2 = add_submenu_page('mowsterG', __('Add term','mowsterGL'), __('Add term','mowsterGL'), 5, MOWSTERG_ADD_ACTION, 'mowsterG_tools_menu_add');	
-		
-	add_action('admin_print_styles-' . $tools1, 'mowsterG_styles'); 
-	add_action('admin_print_scripts-' . $tools1, 'mowsterG_tools_scripts');
-	
-	add_action('admin_print_styles-' . $tools2, 'mowsterG_styles'); 
-	add_action('admin_print_scripts-' . $tools2, 'mowsterG_tools_scripts');
+	$menu[1] = add_submenu_page( MOWSTERG_MAIN_ACTION , __('Terms','mowsterGL'), __('Terms','mowsterGL'), 5, MOWSTERG_MAIN_ACTION, 'mowsterG_tools_menu');
+	$menu[2] = add_submenu_page( MOWSTERG_MAIN_ACTION , __('Add term','mowsterGL'), __('Add term','mowsterGL'), 5, MOWSTERG_ADD_ACTION, 'mowsterG_tools_menu_add');	
+
+	for ($i = 1; $i <= 2; $i++) {
+		add_action('admin_print_styles-' . $menu[$i], 'mowsterG_styles'); 
+		add_action('admin_print_scripts-' . $menu[$i], 'mowsterG_tools_scripts');
+	}
 	
 }
 add_action('admin_menu', 'mowsterG_admin_menu');
-
-function mowsterG_admin_head(){
-	wp_enqueue_style('mowsterG-admin', MOWSTERG_URL_PATH . 'styles/admin.css', '', MOWSTERG_VERSION);
-}
-add_filter('admin_head', 'mowsterG_admin_head');
 
 
 function mowsterG_tools_menu(){
