@@ -111,7 +111,7 @@ if ($terms){
 					<?php 
 					}
 				} else {
-					echo '<tr><td></td><td></td><td></td><td>'. __('There are no Terms in the database.', 'mowsterGL').'</td></tr>';
+					echo '<tr><td colspan="2">'. __('There are no Terms in the database.', 'mowsterGL').'</td></tr>';
 				}
 				?>
 			</tbody>

@@ -3,7 +3,7 @@
 	Plugin Name: mowsterGlossary
 	Plugin URI: http://development.mowster.net
 	Description: mowsterGlossary plugin is designed to give WordPress users an easy way to create and manage an online glossary of terms.
-	Version: 2.3
+	Version: 2.3.1
 	Author: PedroDM
 	Author URI: http://jobs.mowster.net
 */
@@ -15,7 +15,7 @@ if (realpath(__FILE__) === realpath($_SERVER["SCRIPT_FILENAME"])) {
 	die();
 }
 
-define('MOWSTERG_VERSION', 			'2.3');
+define('MOWSTERG_VERSION', 			'2.3.1');
 define('MOWSTERG_URL_PATH', 		WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)));
 define('MOWSTERG_PLUGIN_PATH',		realpath(dirname(__FILE__)));
 define('MOWSTERG_TABLE',         	'mowster-glossary');
@@ -71,26 +71,35 @@ function mowsterG_styles(){
 }
 
 function mowsterG_tools_scripts(){
-		
-	if ($_REQUEST['page'] == MOWSTERG_ADD_ACTION && isset($_POST['submit']) === false) wp_enqueue_script('mowsterGL_js-new_term', MOWSTERG_URL_PATH . 'js/add.js', '', MOWSTERG_VERSION);
-	elseif ($_REQUEST['action'] == 'edit_term' && isset($_POST['submit']) === false) wp_enqueue_script('mowsterGL_js-edit_term', MOWSTERG_URL_PATH . 'js/edit.js', '', MOWSTERG_VERSION);
-	else wp_enqueue_script('mowsterGL_js-list', MOWSTERG_URL_PATH . 'js/list.js', '', MOWSTERG_VERSION);
-	
+
 	$mowsterG_new_edit_term = array(
 		'mowsterG_term_default' => __('Type here the new term', 'mowsterGL'),
 		'mowsterG_term_lenght_error' => __('Term must be lower than 255 chars.', 'mowsterGL'),
 		'mowsterG_definition_error' => __('Definition cannot be blank.', 'mowsterGL'),
 		'mowsterG_admin_url' => get_admin_url(),
 	);
-	wp_localize_script('mowsterGL_js-new_term', 'mowsterG', $mowsterG_new_edit_term);
-	wp_localize_script('mowsterGL_js-edit_term', 'mowsterG', $mowsterG_new_edit_term);
-
+	
 	$mowsterG_list = array(
 		'mowsterG_terms_per_page_warning' => __('Atention! This action will change the numbers of terms displayed in the public glossary. Show ', 'mowsterGL'),
 		'mowsterG_terms' => __('terms per page', 'mowsterGL'),
 		'mowsterG_term_confirm' => __('Erease the term', 'mowsterGL')
-	);
-	wp_localize_script('mowsterGL_js-list', 'mowsterG_list', $mowsterG_list);
+	);	
+		
+	if ($_REQUEST['page'] == MOWSTERG_ADD_ACTION && isset($_POST['submit']) === false) {
+		wp_enqueue_script('mowsterGL_js-new_term', MOWSTERG_URL_PATH . 'js/add.js', '', MOWSTERG_VERSION);
+		
+		wp_localize_script('mowsterGL_js-new_term', 'mowsterG', $mowsterG_new_edit_term);
+	}
+	elseif ($_REQUEST['action'] == 'edit_term' && isset($_POST['submit']) === false) {
+		wp_enqueue_script('mowsterGL_js-edit_term', MOWSTERG_URL_PATH . 'js/edit.js', '', MOWSTERG_VERSION);
+		
+		wp_localize_script('mowsterGL_js-edit_term', 'mowsterG', $mowsterG_new_edit_term);		
+	} else {
+		wp_enqueue_script('mowsterGL_js-list', MOWSTERG_URL_PATH . 'js/list.js', '', MOWSTERG_VERSION);
+		
+		wp_localize_script('mowsterGL_js-list', 'mowsterG_list', $mowsterG_list);
+	}
+	
 }
 
 function mowsterG_admin_scripts(){
