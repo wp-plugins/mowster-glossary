@@ -44,11 +44,11 @@ mowsterGlossary plugin is designed to give WordPress users an easy way to create
 
 == Frequently Asked Questions ==
 
-= How am I able to have the plugin installed in Wordpress realeses older than 3.3 ? =
+= How am I able to have the plugin installed in Wordpress versions before 3.3 ? =
 
 For users with WordPress versions up to 3.2.1, install mowsterGlossary <a href="http://downloads.wordpress.org/plugin/mowster-glossary.2.0.12.zip">2.0.12</a>
 
-= How can I give a suggestion to improve the plugin or report an error found ? =
+= How can I provide a suggestion to improve the plugin or report an error found ? =
 
 To provide suggestions or report bugs users have to open a thread in the support [forum](http://wordpress.org/tags/mowster-glossary?forum_id=10 "Support") 
 
