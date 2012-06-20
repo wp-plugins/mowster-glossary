@@ -11,10 +11,16 @@ if (mowsterG_html_decode($_POST['submit']) == mowsterG_html_decode(__('Add &raqu
 	$table = $wpdb->prefix.MOWSTERG_TABLE;	
 	
 	
-	$insert = $wpdb->query($wpdb->prepare("INSERT INTO `$table` (Title, Definition) VALUES (%s, %s)",
-			strtoupper(strip_tags(stripslashes($_REQUEST["new_term"]))), 
-			stripslashes($_REQUEST["new_mowsterG_definition"])
-	));
+	$insert = $wpdb->insert( 
+					$table, 
+					array( 
+						'Title' => strtoupper(strip_tags(stripslashes($_REQUEST["new_term"]))), 
+						'Definition' => stripslashes($_REQUEST["new_mowsterG_definition"])
+					), 
+					array( 
+						'%s', 
+						'%s' 
+					));
 	
 	require_once( MOWSTERG_PLUGIN_PATH . '/header.php');
 	
@@ -60,7 +66,7 @@ require_once( MOWSTERG_PLUGIN_PATH . '/header.php');
 			
 			<div id="td_mowsterG_definition">
 				<?php	
-				$tiny_mce = tiny_mce_settings();								
+				$tiny_mce = mowsterG_tiny_mce_settings();								
 				wp_editor('', 'new_mowsterG_definition', array('wpautop' => true, 'textarea_name' => 'new_mowsterG_definition', 'media_buttons' => false, "tinymce" => $tiny_mce)); 
 				?>
 			</div>

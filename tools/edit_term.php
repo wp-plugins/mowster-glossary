@@ -44,7 +44,7 @@ if (mowsterG_html_decode($_POST['submit']) == mowsterG_html_decode(__('Confirm &
 
 require_once( MOWSTERG_PLUGIN_PATH . '/header.php');
 
-$term = $wpdb->get_results("SELECT * FROM `$table` WHERE ID='".$_REQUEST['term']."'");
+$term = $wpdb->get_row("SELECT * FROM `$table` WHERE ID='".$_REQUEST['term']."'");
 
 ?>
 <form method="post" id="mowsterG_edit_preview" action="" autocomplete="off">
@@ -52,21 +52,21 @@ $term = $wpdb->get_results("SELECT * FROM `$table` WHERE ID='".$_REQUEST['term']
 	<div id="poststuff" class="metabox-holder">
 		<div id="formatdiv" class="postbox" style="width: 600px;">
 			<h3 class="handle">
-				<span><?php _e('Edit term', 'mowsterGL'); ?> : <span class="edit_term_show"><?php echo $term[0]->Title; ?></span></span>
+				<span><?php _e('Edit term', 'mowsterGL'); ?> : <span class="edit_term_show"><?php echo $term->Title; ?></span></span>
 			</h3>
 		</div>
 	</div>
 
 	<div class="inside">
 		<fieldset>				
-			<input type="text" id="edit_term" name="edit_term" value="<?php echo $term[0]->Title; ?>" />
+			<input type="text" id="edit_term" name="edit_term" value="<?php echo $term->Title; ?>" />
 			<div id="edit_term_show"></div>
 			<div id="edit_term_error"></div>
 			
 			<div id="td_mowsterG_definition">
 				<?php 		
-				$tiny_mce = tiny_mce_settings();								
-				wp_editor($term[0]->Definition, 'new_mowsterG_definition', array('wpautop' => true, 'textarea_name' => 'edit_mowsterG_definition', 'media_buttons' => false, "tinymce" => $tiny_mce)); 
+				$tiny_mce = mowsterG_tiny_mce_settings();								
+				wp_editor($term->Definition, 'new_mowsterG_definition', array('wpautop' => true, 'textarea_name' => 'edit_mowsterG_definition', 'media_buttons' => false, "tinymce" => $tiny_mce)); 
 				?>
 			</div>
 			<div id="edit_definition_show"></div>
@@ -75,7 +75,7 @@ $term = $wpdb->get_results("SELECT * FROM `$table` WHERE ID='".$_REQUEST['term']
 				<input type="submit" name="submit" id="edit_term_st" value="<?php _e('Edit', 'mowsterGL'); ?>" /><img src="<?php echo admin_url(); ?>images/wpspin_light.gif" alt="" class="ajaxsave" style="display: none;" />
 				<input type="button" name="edit_term_edit" id="edit_term_edit" value="<?php _e('Edit', 'mowsterGL'); ?>" style="display: none;" />
 				<input type="submit" name="submit" id="edit_term_submit" class="button-primary" value="<?php _e('Confirm &raquo;', 'mowsterGL'); ?>" style="display: none;" />
-				<input type="hidden" name="edit_term_id" id="edit_term_id" value="<?php echo $term[0]->ID; ?>" />
+				<input type="hidden" name="edit_term_id" id="edit_term_id" value="<?php echo $term->ID; ?>" />
 			</div>	
 		</fieldset>
 	</div>

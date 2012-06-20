@@ -4,7 +4,7 @@ jQuery(document).ready(function () {
 
 	jQuery('#edit_term_st').click(function() {
 	
-		error = null;
+		var error = null;
 		
 		if (jQuery("#edit_term").val()=="") {
 			jQuery("#edit_term").css('border-color','red');
@@ -101,7 +101,7 @@ jQuery(document).ready(function () {
 });
 
 jQuery.edit_term_clean = function() {
-	jQuery("#edit_term").css('border-color','#DFDFDF');
+	jQuery("#edit_term").css('border','1px solid #DFDFDF');
 	jQuery("#edit_term_error").hide();
 };
 	

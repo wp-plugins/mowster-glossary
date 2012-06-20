@@ -6,15 +6,16 @@ if (realpath(__FILE__) === realpath($_SERVER["SCRIPT_FILENAME"])) {
 	die();
 }
 
+
 if (mowsterG_html_decode($_POST['submit']) == mowsterG_html_decode(__('Save', 'mowsterGL'))) {
 
 	$checks = array(
-	'mowsterG_shortcode', 'mowsterG_terms_per_page', 
-	'mowsterG_html_before_term', 'mowsterG_html_after_term',
-	'mowsterG_html_before_description', 'mowsterG_html_after_description',
-	'mowsterG_text_previous_page', 'mowsterG_text_next_page',
-	'mowsterG_end_size','mowsterG_mid_size',
-	'mowsterG_pagination_word'
+		'mowsterG_shortcode', 'mowsterG_terms_per_page', 
+		'mowsterG_html_before_term', 'mowsterG_html_after_term',
+		'mowsterG_html_before_description', 'mowsterG_html_after_description',
+		'mowsterG_text_previous_page', 'mowsterG_text_next_page',
+		'mowsterG_end_size','mowsterG_mid_size',
+		'mowsterG_pagination_word'
 	);
 	
 	if ($_POST['mowsterG_shortcode'] != get_option('mowsterG_shortcode') 
@@ -24,7 +25,11 @@ if (mowsterG_html_decode($_POST['submit']) == mowsterG_html_decode(__('Save', 'm
 		if ($_POST[$check] != get_option($check)) update_option($check, str_replace("\r\n",' ', $_POST[$check]));
 	}
 
-	if ($flush_rules > 0) { mowsterG_flush_rules(); unset($flush_rules); }
+	if ($flush_rules == 1) { 
+		global $wp_rewrite;
+		$wp_rewrite->flush_rules();
+		unset($flush_rules); 
+	}
 	
 	echo '<div id="message" class="updated fade"><p><strong>'. __('Saved!', 'mowsterGL').'</strong></p></div>';		
 }
@@ -276,6 +281,19 @@ $table = $wpdb->prefix.MOWSTERG_TABLE;
 				</th>
 				<td>
 				
+				</td>
+		</tr>	
+	</table>	
+	<table class="form-table">
+	<h3><?php _e('Management users', 'mowsterGL'); ?></h3>
+		<tr valign="top">
+				<th scope="row">
+				<label for="oprast_admin_users">
+					<?php _e('Authorized users', 'mowsterGL'); ?>
+				</label>							
+				</th>
+				<td style="padding-left: 25px;">
+					<?php echo mowsterG_authorized_users(); ?>
 				</td>
 		</tr>	
 	</table>

@@ -15,7 +15,7 @@ jQuery(document).ready(function () {
 		});
 		
 		jQuery('#terms_per_page_input').click(function(){
-			jQuery("#terms_per_page_input").css('border-color','#DFDFDF');			
+			jQuery("#terms_per_page_input").css('border','1px solid #DFDFDF');			
 		});
 		
 		
