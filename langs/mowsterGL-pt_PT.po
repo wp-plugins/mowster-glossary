@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: mowsterGlossary v2.4\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2012-04-27 20:17-0000\n"
-"PO-Revision-Date: 2012-06-20 17:58:58+0000\n"
+"PO-Revision-Date: 2012-06-20 20:39:36+0000\n"
 "Last-Translator: \n"
 "Language-Team: wordpress.mowster.net <wordpress@mowster.net>\n"
 "MIME-Version: 1.0\n"
@@ -128,7 +128,7 @@ msgstr "Para mostrar o glossário, adicione a seguinte tag em artigos e páginas
 #, php-format
 #@ mowsterGL
 msgid "Posts and Pages containing %s"
-msgstr "Artigos e Página contendo %s"
+msgstr "Artigos e Páginas que contêm %s"
 
 #: options.php:83
 #@ mowsterGL
@@ -275,7 +275,7 @@ msgstr "Confirmar &raquo;"
 #, php-format
 #@ mowsterGL
 msgid "Term %s was updated successfully!"
-msgstr "O Termo %s foi actualizado com sucesso!"
+msgstr "O Termo %s foi atualizado com sucesso!"
 
 #: tools/edit_term.php:39
 #@ mowsterGL
@@ -346,5 +346,5 @@ msgstr "Habilitação de acesso"
 #: users.php:25
 #@ mowsterGL
 msgid "Provide this user the access to mowsterGlossary management features"
-msgstr "Permitir a este utilizador a gestão e acesso ao plugin mowsterGlossary"
+msgstr "Permitir a este utilizador a gestão e acesso ao plug-in mowsterGlossary"
 
