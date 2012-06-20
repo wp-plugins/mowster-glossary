@@ -44,7 +44,7 @@ mowsterGlossary plugin is designed to give WordPress users an easy way to create
 
 == Frequently Asked Questions ==
 
-= How am I able to have the plugin installed in Wordpress versions before 3.3 ? =
+= How am I able to have plugin installed in Wordpress versions before 3.3 ? =
 
 For users with WordPress versions up to 3.2.1, install mowsterGlossary <a href="http://downloads.wordpress.org/plugin/mowster-glossary.2.0.12.zip">2.0.12</a>
 
