@@ -1,0 +1,61 @@
+#icon-glossary {
+    background: url("../images/icon.jpg") no-repeat;
+}
+
+.term_show, #new_term_show, #edit_term_show, .edit_term_show, #mowsterG_upper, input#edit_term{
+	text-transform: uppercase;
+}
+
+.term_show, #new_term_show, #edit_term_show, #mowsterG_upper{
+	font-weight: bold;
+}
+
+#new_term_error, #edit_term_error, #new_definition_error{
+	color: red;
+	font-weight: bold;
+}
+
+input#new_term, input#edit_term, #edit_definition_show, #new_definition_show{
+	width: 600px;
+}
+
+#new_definition_show{
+	padding-top: 12px;
+}
+
+input#terms_per_page_input{
+	width: 30px;
+	text-align:right;
+	padding-right: 2px;
+}
+
+div#terms_per_page{
+	float: right;
+	vertical-align:text-middle;
+}
+
+#td_mowsterG_definition{
+	border-color: transparent;
+	border-collapse: separate;
+    border-radius: 3px 3px 0 0;
+    border-style: solid;
+    border-width: 1px;
+	width: 600px;
+	z-index: 100;
+}
+
+.postbox h3{
+	cursor: default;
+}
+
+#mce_fullscreen_container{
+	background-color: #FFFFFF;
+}
+
+#page_id{
+    font-family: Consolas,Monaco,monospace;
+}
+
+.actions {
+	display:none;
+}
