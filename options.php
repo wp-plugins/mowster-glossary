@@ -285,7 +285,7 @@ $table = $wpdb->prefix.MOWSTERG_TABLE;
 		</tr>	
 	</table>	
 	<table class="form-table">
-	<h3><?php _e('Management users', 'mowsterGL'); ?></h3>
+	<h3><?php _e('Management', 'mowsterGL'); ?></h3>
 		<tr valign="top">
 				<th scope="row">
 				<label for="oprast_admin_users">
