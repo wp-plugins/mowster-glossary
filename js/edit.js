@@ -49,7 +49,7 @@ jQuery(document).ready(function () {
 			
 			output = response.split('|');
 
-			if (output[0] == 'error'){
+			if (jQuery.trim(output[0]) == 'error'){
 				jQuery("#edit_term").css('border-color','red');
 				jQuery("#edit_term_error").show();
 				jQuery("#edit_term_error").text(output[1]);

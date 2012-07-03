@@ -47,7 +47,7 @@ jQuery(document).ready(function () {
 			
 			output = response.split('|');
 
-			if (output[0] == 'error'){
+			if (jQuery.trim(output[0]) == 'error'){
 				jQuery("#new_term").css('border-color','red');
 				jQuery("#new_term_error").show();
 				jQuery("#new_term_error").text(output[1]);

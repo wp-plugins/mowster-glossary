@@ -4,7 +4,7 @@
 	Plugin URI: http://wordpress.mowster.net
 	Description: mowsterGlossary plugin is designed to give WordPress users an easy way to create and manage an online glossary of terms.
 	Author: mowster
-	Version: 2.4
+	Version: 2.4.1
 	License: GPLv2 or later
 	Author URI: http://jobs.mowster.net
 */
@@ -15,7 +15,7 @@ if (realpath(__FILE__) === realpath($_SERVER["SCRIPT_FILENAME"])) {
 	die();
 }
 
-define('MOWSTERG_VERSION', 			'2.4');
+define('MOWSTERG_VERSION', 			'2.4.1');
 define('MOWSTERG_URL_PATH', 		WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)));
 define('MOWSTERG_PLUGIN_PATH',		realpath(dirname(__FILE__)));
 define('MOWSTERG_TABLE',         	'mowster-glossary');
