@@ -1,0 +1,350 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: mowsterGlossary v2.4.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-27 20:17-0000\n"
+"PO-Revision-Date: 2012-07-03 14:24:58+0000\n"
+"Last-Translator: \n"
+"Language-Team: wordpress.mowster.net <wordpress@mowster.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: PORTUGAL\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: ..\n"
+"X-Textdomain-Support: yes"
+
+#: header.php:18
+#: index.php:101
+#: users.php:19
+#@ mowsterGL
+msgid "Glossary"
+msgstr "Glossário"
+
+#: header.php:23
+#, php-format
+#@ mowsterGL
+msgid "%d term"
+msgid_plural "%d terms"
+msgstr[0] "%d termo"
+msgstr[1] "%d termos"
+
+#: header.php:35
+#: index.php:106
+#@ mowsterGL
+msgid "Add term"
+msgstr "Adicionar termo"
+
+#: index.php:51
+#: tools/add_new.php:63
+#@ mowsterGL
+msgid "Type here the new term"
+msgstr "Introduza aqui o novo termo"
+
+#: index.php:52
+#@ mowsterGL
+msgid "Term must be lower than 255 chars."
+msgstr "Termo deve ser inferior a 255 caracteres."
+
+#: index.php:53
+#@ mowsterGL
+msgid "Definition cannot be blank."
+msgstr "Definição não pode ser nula."
+
+#: index.php:58
+#@ mowsterGL
+msgid "Atention! This action will change the numbers of terms displayed in the public glossary. Show "
+msgstr "Atenção! Esta ação irá alterar o número de termos mostrados no glossário. Mostrar "
+
+#: index.php:59
+#: tools/list_terms.php:59
+#@ mowsterGL
+msgid "terms per page"
+msgstr "termos por página"
+
+#: index.php:60
+#@ mowsterGL
+msgid "Erease the term"
+msgstr "Apagar o termo"
+
+#: index.php:85
+#@ mowsterGL
+msgid "Are you sure you want to restore the dafaults"
+msgstr "Tem a certeza que deseja restabelecer os valores padrão"
+
+#: index.php:105
+#@ mowsterGL
+msgid "Terms"
+msgstr "Termos"
+
+#: options.php:10
+#: options.php:101
+#: options.php:174
+#: options.php:253
+#: tools/list_terms.php:9
+#: tools/list_terms.php:61
+#@ mowsterGL
+msgid "Save"
+msgstr "Guardar"
+
+#: options.php:34
+#@ mowsterGL
+msgid "Saved!"
+msgstr "Guardado!"
+
+#: options.php:37
+#: options.php:276
+#@ mowsterGL
+msgid "Reset to defaults"
+msgstr "Restabelecer valores padrão"
+
+#: options.php:40
+#@ mowsterGL
+msgid "Defaults restored!"
+msgstr "Valores padrão restabelecidos!"
+
+#: options.php:56
+#@ mowsterGL
+msgid "Display"
+msgstr "Mostrar"
+
+#: options.php:60
+#@ mowsterGL
+msgid "Shortcode"
+msgstr "Shortcode"
+
+#: options.php:65
+#, php-format
+#@ mowsterGL
+msgid "To display the glossary, add the following tag in posts and pages: %s"
+msgstr "Para mostrar o glossário, adicione a seguinte tag em artigos e páginas: %s"
+
+#: options.php:70
+#, php-format
+#@ mowsterGL
+msgid "Posts and Pages containing %s"
+msgstr "Artigos e Páginas que contêm %s"
+
+#: options.php:83
+#@ mowsterGL
+msgid "No posts or pages contain the shortcode"
+msgstr "Nenhum artigo ou página tem o shortcode"
+
+#: options.php:90
+#@ mowsterGL
+msgid "Number of Terms per Page"
+msgstr "Número de Termos por Página"
+
+#: options.php:113
+#@ mowsterGL
+msgid "Customize output"
+msgstr "Personalizar a exibição"
+
+#: options.php:116
+#: tools/list_terms.php:79
+#@ mowsterGL
+msgid "Term"
+msgstr "Termo"
+
+#: options.php:125
+#: options.php:153
+#@ mowsterGL
+msgid "HTML to be inserted before"
+msgstr "HTML para ser inserido antes"
+
+#: options.php:135
+#: options.php:163
+#@ mowsterGL
+msgid "HTML to be inserted after"
+msgstr "HTML para ser inserido depois"
+
+#: options.php:144
+#@ mowsterGL
+msgid "Description"
+msgstr "Descrição"
+
+#: options.php:186
+#@ mowsterGL
+msgid "Glossary navigation"
+msgstr "Navegação do glossário"
+
+#: options.php:190
+#@ mowsterGL
+msgid "Text For Previous Page"
+msgstr "Texto para Página Anterior"
+
+#: options.php:200
+#@ mowsterGL
+msgid "Text For Next Page"
+msgstr "Texto para Próxima Página"
+
+#: options.php:210
+#@ mowsterGL
+msgid "End size"
+msgstr "Valor final"
+
+#: options.php:215
+#@ mowsterGL
+msgid "How many numbers on either the start and the end list edges."
+msgstr "Quantidade de números a cada início e no final da lista."
+
+#: options.php:221
+#@ mowsterGL
+msgid "Mid size"
+msgstr "Valor médio"
+
+#: options.php:226
+#@ mowsterGL
+msgid "How many numbers to either side of current page, but not including current page."
+msgstr "Quantidade de números de cada lado da página atual, não incluindo a página atual."
+
+#: options.php:233
+#@ mowsterGL
+msgid "Pagination structure"
+msgstr "Estrutura da paginação"
+
+#: options.php:241
+#@ mowsterGL
+msgid "Page 2 URL example"
+msgstr "Página 2, exemplo de URL"
+
+#: shortcode.php:51
+#@ mowsterGL
+msgid "terms"
+msgstr "termos"
+
+#: tools/add_new.php:9
+#: tools/add_new.php:76
+#: tools/add_new.php:78
+#@ mowsterGL
+msgid "Add &raquo;"
+msgstr "Adicionar &raquo;"
+
+#: tools/add_new.php:28
+#, php-format
+#@ mowsterGL
+msgid "Term %s was saved successfully!"
+msgstr "Termo %s adicionado com sucesso!"
+
+#: tools/add_new.php:40
+#@ mowsterGL
+msgid "mySQL error! It was not possible to add the term into the database."
+msgstr "Erro mySQL! Não foi possível adicionar o termo na base de dados."
+
+#: tools/add_new.php:56
+#@ mowsterGL
+msgid "New term"
+msgstr "Novo termo"
+
+#: tools/add_new.php:77
+#: tools/edit_term.php:75
+#: tools/edit_term.php:76
+#: tools/list_terms.php:99
+#@ mowsterGL
+msgid "Edit"
+msgstr "Editar"
+
+#: tools/delete_term.php:20
+#, php-format
+#@ mowsterGL
+msgid "Term %s was deleted successfully!"
+msgstr "Termo %s apagado com sucesso!"
+
+#: tools/delete_term.php:31
+#@ mowsterGL
+msgid "mySQL error! It was not possible to delete the term from the database."
+msgstr "Erro mySQL! Não foi possível apagar o termo na base de dados."
+
+#: tools/delete_term.php:37
+#@ mowsterGL
+msgid "Error! Missing definition."
+msgstr "Erro! Sem definição."
+
+#: tools/edit_term.php:9
+#: tools/edit_term.php:77
+#@ mowsterGL
+msgid "Confirm &raquo;"
+msgstr "Confirmar &raquo;"
+
+#: tools/edit_term.php:26
+#, php-format
+#@ mowsterGL
+msgid "Term %s was updated successfully!"
+msgstr "O Termo %s foi atualizado com sucesso!"
+
+#: tools/edit_term.php:39
+#@ mowsterGL
+msgid "mySQL error! It was not possible to update the term in the database."
+msgstr "Erro mySQL! Não é possível atualizar o termo na base de dados."
+
+#: tools/edit_term.php:55
+#@ mowsterGL
+msgid "Edit term"
+msgstr "Editar termo"
+
+#: tools/list_terms.php:27
+#@ default
+msgid "&laquo;"
+msgstr "&laquo;"
+
+#: tools/list_terms.php:28
+#@ default
+msgid "&raquo;"
+msgstr "&raquo;"
+
+#: tools/list_terms.php:45
+#@ mowsterGL
+msgid "Displaying"
+msgstr "Mostrando"
+
+#: tools/list_terms.php:45
+#@ mowsterGL
+msgid "of"
+msgstr "de"
+
+#: tools/list_terms.php:79
+#@ mowsterGL
+msgid "Definition"
+msgstr "Definição"
+
+#: tools/list_terms.php:96
+#@ mowsterGL
+msgid "Delete"
+msgstr "Apagar"
+
+#: tools/list_terms.php:114
+#@ mowsterGL
+msgid "There are no Terms in the database."
+msgstr "Não existem Termos na base de dados."
+
+#: tools/preview.php:14
+#: tools/preview.php:18
+#@ mowsterGL
+msgid "already exists!"
+msgstr "Termo existente!"
+
+#: options.php:292
+#@ mowsterGL
+msgid "Authorized users"
+msgstr "Utilizadores autorizados"
+
+#: users.php:23
+#@ mowsterGL
+msgid "Authorization access"
+msgstr "Habilitação de acesso"
+
+#: users.php:25
+#@ mowsterGL
+msgid "Provide this user the access to mowsterGlossary management features"
+msgstr "Permitir a este utilizador a gestão e acesso ao plugin mowsterGlossary"
+
+#: options.php:288
+#@ mowsterGL
+msgid "Management"
+msgstr "Habilitações"
+
