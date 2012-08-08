@@ -4,7 +4,7 @@
 	Plugin URI: http://wordpress.mowster.net
 	Description: mowsterGlossary plugin is designed to give WordPress users an easy way to create and manage an online glossary of terms.
 	Author: mowster
-	Version: 2.4.1
+	Version: 2.4.2
 	License: GPLv2 or later
 	Author URI: http://jobs.mowster.net
 */
@@ -15,7 +15,7 @@ if (realpath(__FILE__) === realpath($_SERVER["SCRIPT_FILENAME"])) {
 	die();
 }
 
-define('MOWSTERG_VERSION', 			'2.4.1');
+define('MOWSTERG_VERSION', 			'2.4.2');
 define('MOWSTERG_URL_PATH', 		WP_PLUGIN_URL.'/'.str_replace(basename( __FILE__),"",plugin_basename(__FILE__)));
 define('MOWSTERG_PLUGIN_PATH',		realpath(dirname(__FILE__)));
 define('MOWSTERG_TABLE',         	'mowster-glossary');
@@ -47,6 +47,7 @@ function mowsterG_styles(){
 
 function mowsterG_tools_scripts(){
 
+
 	$mowsterG_new_edit_term = array(
 		'mowsterG_term_default' => __('Type here the new term', 'mowsterGL'),
 		'mowsterG_term_lenght_error' => __('Term must be lower than 255 chars.', 'mowsterGL'),
@@ -61,16 +62,16 @@ function mowsterG_tools_scripts(){
 	);	
 		
 	if ($_REQUEST['page'] == MOWSTERG_ADD_ACTION && isset($_POST['submit']) === false) {
-		wp_enqueue_script('mowsterGL_js-new_term', MOWSTERG_URL_PATH . 'js/add.js', '', MOWSTERG_VERSION);
+		wp_enqueue_script('mowsterGL_js-new_term', MOWSTERG_URL_PATH . 'js/add.js', array('jquery'), MOWSTERG_VERSION);
 		
 		wp_localize_script('mowsterGL_js-new_term', 'mowsterG', $mowsterG_new_edit_term);
 	}
 	elseif ($_REQUEST['action'] == 'edit_term' && isset($_POST['submit']) === false) {
-		wp_enqueue_script('mowsterGL_js-edit_term', MOWSTERG_URL_PATH . 'js/edit.js', '', MOWSTERG_VERSION);
+		wp_enqueue_script('mowsterGL_js-edit_term', MOWSTERG_URL_PATH . 'js/edit.js', array('jquery'), MOWSTERG_VERSION);
 		
 		wp_localize_script('mowsterGL_js-edit_term', 'mowsterG', $mowsterG_new_edit_term);		
 	} else {
-		wp_enqueue_script('mowsterGL_js-list', MOWSTERG_URL_PATH . 'js/list.js', '', MOWSTERG_VERSION);
+		wp_enqueue_script('mowsterGL_js-list', MOWSTERG_URL_PATH . 'js/list.js', array('jquery'), MOWSTERG_VERSION);
 		
 		wp_localize_script('mowsterGL_js-list', 'mowsterG_list', $mowsterG_list);
 	}
@@ -79,7 +80,10 @@ function mowsterG_tools_scripts(){
 
 function mowsterG_admin_scripts(){
 
-	wp_enqueue_script('mowsterGL_js-options', MOWSTERG_URL_PATH . 'js/options.js', '', MOWSTERG_VERSION);
+
+	wp_enqueue_script('jquery');
+
+	wp_enqueue_script('mowsterGL_js-options', MOWSTERG_URL_PATH . 'js/options.js', array('jquery'), MOWSTERG_VERSION);
 	
 	$mowsterG_options = array(
 		'mowsterG_default_confirm' => __('Are you sure you want to restore the dafaults', 'mowsterGL')

@@ -3,7 +3,7 @@ Contributors: mowster
 Tags: glossary,posts,terms,dictionary,definitions,gloss
 Requires at least: 3.3
 Tested up to: 3.4.1
-Stable tag: 2.4.1
+Stable tag: 2.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -60,6 +60,9 @@ To provide suggestions or report bugs users have to open a thread in the support
 4. User authorization.
 
 == Changelog ==
+
+= 2.4.2 =
+*  WordPress wp_enqueue_script optimized for scripts depending from jQuery
 
 = 2.4.1 =
 * Bug fixed: jQuery error check and display, when term is added or edited in administration zone
