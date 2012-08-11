@@ -29,6 +29,8 @@ mowsterGlossary plugin is designed to give WordPress users an easy way to create
 = Translations =
 * Portuguese pt-PT
 
+* For users with WordPress installations up to 3.2.1, install mowsterGlossary <a href="http://downloads.wordpress.org/plugin/mowster-glossary.2.0.12.zip">2.0.12</a>
+
 <strong>Plugin Site</strong> <a href="http://wordpress.mowster.net">wordpress.mowster.net</a> | <strong>Credits</strong> <a href="http://jobs.mowster.net">jobs.mowster.net</a>
 
 == Installation ==
